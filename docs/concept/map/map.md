@@ -1,694 +1,770 @@
-# Project Sagittarius – Konzept der Sternenkarte
+# Project Sagittarius – Konzept der Galaxiekarte
 
 **Projekt:** Project Sagittarius / Sternenreiche  
-**Dokument:** `docs/concept/map.md`  
-**Dokumentversion:** 0.2  
+**Dokument:** `docs/concept/map/map.md`  
+**Dokumentversion:** 0.3  
 **Stand:** 10. November 2026  
 **Status:** Fachliches Spielkonzept  
-**Geltungsbereich:** Galaxiekarte, Sternensystemkarte, astronomische Spielwelt und räumliche Navigation
+**Geltungsbereich:** Ausschließlich die dreidimensionale Galaxiekarte der Milchstraße  
+**Visuelle und funktionale Referenz:** Galaxiekarte von Elite Dangerous
 
 ---
 
 # 1. Grundidee
 
-Die Sternenkarte bildet die räumliche Grundlage von Project Sagittarius.
+Die Galaxiekarte bildet die zentrale räumliche und strategische Übersicht der Spielwelt von Project Sagittarius.
 
-Die Spielwelt soll eine dreidimensionale Darstellung unserer Milchstraße bieten, deren Sternpositionen und astronomische Eigenschaften möglichst auf realen wissenschaftlichen Daten basieren.
+Sie stellt die Milchstraße in einem vollständig dreidimensionalen Raum dar.
 
-Anders als bei einer rein prozedural erzeugten Galaxie soll der Spieler tatsächlich bekannte Sterne und Sternensysteme wiederfinden können.
+Die Positionen und Entfernungen realer Sterne sollen auf wissenschaftlichen astronomischen Daten basieren.
 
-Sterne wie die Sonne, Sirius oder Proxima Centauri sollen an den Positionen erscheinen, die sich aus den verwendeten astronomischen Katalogdaten ergeben.
+Anders als bei einer ausschließlich prozedural generierten Spielgalaxie sollen bekannte Sterne ihre tatsächlichen räumlichen Beziehungen zueinander behalten.
 
-Fehlende Informationen können durch eine deterministische prozedurale Generierung ergänzt werden.
+Beispielsweise sollen die Sonne, Sirius, Proxima Centauri und andere katalogisierte Sterne an ihren astronomisch bestimmten Positionen erscheinen.
 
-Das Ergebnis ist eine hybride Spielwelt aus realen und fiktiven astronomischen Informationen.
+Die Galaxiekarte dient als zentrales Instrument für die räumliche Orientierung, die interstellare Navigation und die strategische Verwaltung einer Zivilisation.
 
-## 1.1 Die Sternenkarte als zentrale Spielansicht
+## 1.1 Orientierung an Elite Dangerous
 
-Die Sternenkarte ist nicht ausschließlich eine grafische Übersicht.
+**Die Galaxiekarte von Elite Dangerous ist die verbindliche visuelle und funktionale Referenz für die Galaxiekarte von Project Sagittarius.**
 
-Sie bildet gleichzeitig die Grundlage für:
+Die Orientierung umfasst ausdrücklich:
 
-- Die Erkundung der Galaxie.
-- Die Auswahl von Sternensystemen.
-- Die Navigation von Raumschiffen.
-- Die Darstellung von Kolonien.
-- Die Darstellung politischer Einflussbereiche.
-- Die Positionierung von Raumstationen und Sprungtoren.
-- Die Visualisierung interstellarer Transportverbindungen.
-- Die Bewegung und Positionierung von Raumflotten.
-- Die strategische Planung einer Zivilisation.
+- Die dreidimensionale Darstellung der Sterne.
+- Die räumliche Tiefenwirkung.
+- Den grundsätzlichen Aufbau der Kartenansicht.
+- Die freie Bewegung innerhalb des dreidimensionalen Raums.
+- Das Drehen und Neigen der Kamera.
+- Die Fokussierung ausgewählter Sternensysteme.
+- Das Zoomverhalten.
+- Die Darstellung von Sternnamen und Markierungen.
+- Die Anzeige räumlicher Entfernungen.
+- Die Verwendung von Orientierungsgittern.
+- Die Suche nach Sternensystemen.
+- Die Bedienung von Informations- und Filteransichten.
+- Die Darstellung geplanter interstellarer Routen.
+- Das allgemeine technisch-futuristische Erscheinungsbild.
 
-Alle diese Funktionen verwenden eine gemeinsame räumliche Grundlage.
+Der Spieler soll bei der Verwendung der Galaxiekarte ein Bediengefühl erleben, das dem der Galaxiekarte von Elite Dangerous sehr nahekommt.
 
-## 1.2 Zentrale Gestaltungsprinzipien
+Die Karte soll sich wie ein leistungsfähiges astronomisches Navigationsinstrument anfühlen.
 
-Die Sternenkarte soll folgende Eigenschaften besitzen:
+Die Gestaltung erhält dennoch eine eigene visuelle Identität für Project Sagittarius. Originalgrafiken, Benutzeroberflächen, Texte, Symbole oder andere geschützte Assets aus Elite Dangerous werden nicht übernommen.
 
-**Astronomische Glaubwürdigkeit**
+## 1.2 Die Galaxiekarte als eigenständiges Spielsystem
 
-Die Positionen und Entfernungen realer Sterne sollen ihren wissenschaftlich dokumentierten Werten entsprechen.
+Die Galaxiekarte ist ein eigenständiger Bestandteil von Project Sagittarius.
 
-**Räumliche Freiheit**
-
-Der Spieler soll die Galaxie als echten dreidimensionalen Raum erleben und nicht als flaches Sternennetz.
-
-**Konsistenz**
-
-Die Galaxiekarte und die Sternensystemansicht verwenden dieselben astronomischen Informationen.
-
-**Dynamik**
-
-Planeten und andere geeignete Himmelskörper bewegen sich abhängig von der Spielzeit auf ihren festgelegten Umlaufbahnen.
-
-**Übersichtlichkeit**
-
-Trotz der großen Zahl astronomischer Objekte muss die Karte navigierbar und verständlich bleiben.
-
-**Strategische Nutzbarkeit**
-
-Die Sternenkarte muss wirtschaftliche, militärische und politische Spielinformationen darstellen können, ohne die astronomische Grundlage zu verändern.
-
----
-
-# 2. Aufbau der Spielwelt
-
-## 2.1 Die Milchstraße
-
-Die langfristige Spielwelt orientiert sich an der tatsächlichen Milchstraße.
-
-Ihre räumliche Struktur soll nicht ausschließlich durch frei erfundene Sternpositionen entstehen.
-
-Stattdessen bilden astronomische Kataloge die Grundlage.
-
-Wo geeignete Daten fehlen, können zusätzliche Systeme plausibel erzeugt werden.
-
-Die räumlichen Beziehungen bekannter Sterne bleiben dabei erhalten.
-
-## 2.2 Dreidimensionaler Raum
-
-Die Galaxie besitzt drei räumliche Dimensionen.
-
-Jedes Sternensystem erhält eine Position innerhalb eines einheitlichen astronomischen Koordinatenraums.
-
-Damit sind auch Sterne sichtbar, die über oder unter der galaktischen Ebene liegen.
-
-Die Karte darf nicht auf eine zweidimensionale Verteilung mit lediglich dekorativer Tiefenwirkung reduziert werden.
-
-## 2.3 Tatsächliche Sternentfernungen
-
-Die Entfernung zwischen zwei Sternensystemen ergibt sich aus ihren räumlichen Positionen.
-
-Diese Entfernung bildet auch die Grundlage für die interstellare Reisezeit.
-
-Die grafische Darstellung darf Sternpositionen nicht nachträglich verschieben, um kürzere Routen oder optisch gleichmäßigere Sternabstände zu erzeugen.
-
-Visuelle Symbole können für die bessere Erkennbarkeit vergrößert werden.
-
-Die zugrunde liegenden räumlichen Entfernungen bleiben davon unberührt.
-
-## 2.4 Sternensysteme
-
-Die grundlegende astronomische Einheit ist das Sternensystem.
-
-Ein Sternensystem kann enthalten:
-
-- Einen einzelnen Stern.
-- Zwei oder mehrere Sterne.
-- Planeten.
-- Monde.
-- Asteroiden.
-- Asteroidengürtel.
-- Weitere astronomische Kleinkörper.
-- Künstliche Objekte wie Raumstationen.
-- Raumschiffe und Raumflotten.
-- Sprungtore.
-
-Nicht jedes System muss alle Objekttypen enthalten.
-
-Die tatsächliche Zusammensetzung richtet sich nach den vorhandenen astronomischen Informationen und den gegebenenfalls erzeugten Ergänzungen.
-
----
-
-# 3. Astronomische Daten
-
-## 3.1 Reale Daten als Grundlage
-
-Die Sternenkarte soll möglichst viele wissenschaftlich dokumentierte Sterne verwenden.
-
-Hierzu werden öffentlich zugängliche astronomische Kataloge als Quellen vorgesehen.
-
-Die wissenschaftlichen Quelldaten bleiben von den durch die Spielsimulation veränderlichen Informationen getrennt.
-
-## 3.2 Gaia
-
-Gaia bildet eine zentrale astronomische Datenquelle.
-
-Insbesondere Gaia DR3 wird als Ausgangsbasis für die Sternenpositionen vorgesehen.
-
-Relevante Informationen sind unter anderem:
-
-- Position am Himmel.
-- Parallaxe und daraus ableitbare Entfernungsinformationen.
-- Sternhelligkeit.
-- Eigenbewegung.
-- Radialgeschwindigkeit, soweit verfügbar.
-- Weitere astrophysikalische Eigenschaften.
-
-Nicht jeder Gaia-Datensatz besitzt sämtliche Informationen in gleicher Qualität.
-
-Die Spielwelt muss deshalb auch unvollständige oder unsichere Angaben berücksichtigen können.
-
-## 3.3 Hipparcos
-
-Hipparcos kann als ergänzende astronomische Datenquelle verwendet werden.
-
-Die Daten können beispielsweise für den Abgleich von Sternidentifikatoren und die Ergänzung ausgewählter Sterninformationen genutzt werden.
-
-Sterne, die in mehreren Katalogen vorkommen, dürfen innerhalb der Spielwelt nicht versehentlich mehrfach angelegt werden.
-
-## 3.4 NASA Exoplanet Archive
-
-Das NASA Exoplanet Archive dient als vorgesehene Quelle für wissenschaftlich bekannte Exoplaneten.
-
-Für einen Exoplaneten können je nach Datenlage unter anderem bekannt sein:
-
-- Zugehöriger Zentralstern.
-- Umlaufperiode.
-- Große Halbachse.
-- Planetengröße.
-- Planetenmasse.
-- Exzentrizität.
-- Weitere Bahneigenschaften.
-
-Unbekannte Eigenschaften werden bei Bedarf ergänzt.
-
-Es wird nicht vorausgesetzt, dass für jeden wissenschaftlich bekannten Exoplaneten eine vollständig rekonstruierbare dreidimensionale Umlaufbahn existiert.
-
-## 3.5 Unterschiedliche Datenherkunft
-
-Jede relevante astronomische Eigenschaft soll einer Herkunftskategorie zugeordnet werden.
-
-| Kategorie | Bedeutung |
-|---|---|
-| Beobachtet | Wissenschaftlich gemessene Eigenschaft |
-| Geschätzt | Wissenschaftlich abgeleitete Eigenschaft |
-| Generiert | Durch die Spielwelt erzeugte Eigenschaft |
-| Fiktiv | Bewusst erfundenes Spielelement |
-
-Die Herkunft wird möglichst für einzelne Eigenschaften geführt.
-
-Ein Planet kann somit gleichzeitig beobachtete und generierte Eigenschaften besitzen.
-
-Beispielsweise kann seine Umlaufperiode bekannt sein, während Temperatur, Atmosphäre und Oberflächenbedingungen generiert werden müssen.
-
-## 3.6 Wissenschaftliche Unsicherheit
-
-Messwerte sind nicht grundsätzlich exakt.
-
-Die astronomische Datenbasis soll daher vorhandene Unsicherheiten und Qualitätsinformationen berücksichtigen können.
-
-Falls eine Entfernung oder andere wesentliche Eigenschaft nicht zuverlässig bestimmt werden kann, wird diese Unsicherheit dokumentiert.
-
-Für die Spielsimulation darf gegebenenfalls ein plausibler Ersatzwert verwendet werden, dessen Herkunft entsprechend gekennzeichnet ist.
-
-Die wissenschaftliche Beobachtung selbst wird dabei nicht überschrieben.
-
----
-
-# 4. Prozedurale Ergänzung der Galaxie
-
-## 4.1 Grundprinzip
-
-Die wissenschaftlich bekannten Daten bilden die Grundlage.
-
-Da nicht sämtliche Sterne, Planeten und Monde der Milchstraße vollständig bekannt sind, ergänzt das Spiel fehlende Informationen durch ein prozedurales Generierungssystem.
-
-Die Generierung soll sich an den verfügbaren astronomischen Eigenschaften orientieren.
-
-## 4.2 Mögliche Ergänzungen
-
-Prozedural ergänzt werden können:
-
-- Noch nicht dokumentierte Planeten.
-- Zusätzliche Monde.
-- Asteroidengürtel.
-- Fehlende Umlaufbahnparameter.
-- Planetare Atmosphären.
-- Planetentemperaturen.
-- Geologische Eigenschaften.
-- Ressourcenverteilungen.
-- Weitere astronomisch plausible Systembestandteile.
-
-Langfristig können auch zusätzliche Sterne in nicht ausreichend katalogisierten Bereichen der Milchstraße vorgesehen werden.
-
-## 4.3 Wissenschaftliche Eigenschaften haben Vorrang
-
-Bereits bekannte Eigenschaften dürfen nicht willkürlich durch generierte Werte ersetzt werden.
-
-Ein wissenschaftlich dokumentierter Stern bleibt an seiner entsprechenden astronomischen Position.
-
-Eine bekannte Umlaufperiode wird übernommen.
-
-Generiert werden nur die notwendigen Ergänzungen.
-
-## 4.4 Plausibilität
-
-Die Generierung soll nach Möglichkeit berücksichtigen:
-
-- Sternklasse.
-- Sternmasse.
-- Sternleuchtkraft.
-- Planetengrößen.
-- Temperaturverhältnisse.
-- Plausible Planetenabstände.
-- Vereinfacht geprüfte Stabilität der Umlaufbahnen.
-- Eigenschaften von Einzel- und Mehrfachsternsystemen.
-
-Die Spielwelt darf fiktive Elemente enthalten, soll jedoch bei gewöhnlichen astronomischen Objekten nachvollziehbare physikalische Zusammenhänge berücksichtigen.
-
-## 4.5 Reproduzierbarkeit
-
-Ein einmal generiertes Sternensystem muss dauerhaft dieselben astronomischen Eigenschaften besitzen.
-
-Die Generierung erfolgt deshalb deterministisch.
-
-Gleiche Ausgangsdaten, Objektkennungen und Generierungsparameter müssen dieselben Ergebnisse erzeugen.
-
-Das erneute Öffnen eines Systems darf keine neuen Planeten oder veränderten Umlaufbahnen verursachen.
-
-## 4.6 Erweiterbarkeit
-
-Das Konzept lässt offen, ob langfristig ein eigenständiges Generierungssystem namens StellarForge zur Ergänzung weiterer Milchstraßenbereiche eingesetzt wird.
-
-Eine solche Erweiterung muss mit den vorhandenen astronomischen Daten und der gemeinsamen Objektstruktur kompatibel bleiben.
-
----
-
-# 5. Dreidimensionale Galaxiekarte
-
-## 5.1 Grunddarstellung
-
-Die Galaxiekarte stellt Sternensysteme innerhalb eines frei navigierbaren dreidimensionalen Raums dar.
-
-Der Spieler blickt nicht auf eine zweidimensionale Karte mit symbolischen Verbindungen, sondern auf die räumliche Verteilung der Sterne.
-
-Der visuelle Stil soll sich an modernen astronomischen Visualisierungen und der räumlichen Lesbarkeit der Galaxiekarte von Elite Dangerous orientieren.
-
-Die konkrete Gestaltung von Symbolen, Oberfläche und visuellen Effekten wird eigenständig entwickelt.
-
-## 5.2 Darstellung der Sterne
-
-Ein Stern wird als gut erkennbares astronomisches Kartenobjekt dargestellt.
-
-Seine visuelle Erscheinung kann folgende Eigenschaften berücksichtigen:
-
-- Spektralklasse.
-- Temperatur.
-- Farbe.
-- Helligkeit.
-- Entfernung zur Kamera.
-- Ausgewählten beziehungsweise hervorgehobenen Zustand.
-
-Die tatsächliche Größe eines Sterns und die sichtbare Größe seines Kartensymbols müssen nicht identisch sein.
-
-Eine visuelle Vergrößerung dient ausschließlich der Erkennbarkeit.
-
-## 5.3 Darstellung unterschiedlicher Entfernungen
-
-Die Karte muss große Entfernungsunterschiede sinnvoll vermitteln.
-
-Dazu gehören Sterne in unmittelbarer Nähe des Sonnensystems ebenso wie weit entfernte Sternregionen.
-
-Die Kamera soll sich zwischen unterschiedlichen Maßstabsebenen bewegen können.
-
-Die astronomischen Positionen bleiben unabhängig von der jeweiligen Zoomstufe erhalten.
-
-## 5.4 Beschriftungen
-
-Die Karte soll Sternnamen und weitere Informationen anzeigen können.
-
-Dabei dürfen Beschriftungen bei hoher Sterndichte nicht die gesamte Ansicht überdecken.
-
-Vorgesehen ist eine situationsabhängige Anzeige:
-
-- Ausgewählte Sterne erhalten eine hervorgehobene Beschriftung.
-- Bedeutende oder bekannte Systeme können bevorzugt angezeigt werden.
-- Bei größerer Annäherung werden zusätzliche Namen sichtbar.
-- Bei großer Entfernung werden weniger Details eingeblendet.
-
-## 5.5 Sternenauswahl
-
-Der Spieler kann ein Sternensystem durch direkte Auswahl auf der Karte markieren.
-
-Die Auswahl öffnet eine Informationsansicht.
-
-Diese zeigt die verfügbaren astronomischen und spielrelevanten Eigenschaften.
-
-Eine Auswahl bedeutet noch keinen automatischen Wechsel in die Sternensystemansicht.
-
-Der Spieler soll das System zunächst untersuchen und anschließend gezielt öffnen können.
-
-## 5.6 Suche
-
-Eine Suchfunktion soll das Auffinden bekannter astronomischer Objekte ermöglichen.
-
-Gesucht werden kann beispielsweise nach:
-
-- Sternname.
-- Alternativer Bezeichnung.
-- Wissenschaftlicher Katalogkennung.
-- Sternensystemname.
-- Namen einer bekannten Kolonie.
-
-Die Suche soll passende Ergebnisse zur Auswahl anbieten und die Karte auf das betreffende Objekt ausrichten können.
-
----
-
-# 6. Kamerasystem der Galaxiekarte
-
-## 6.1 Freie Bewegung
-
-Der Spieler soll die Galaxiekamera frei bewegen können.
-
-Vorgesehen sind:
-
-- Bewegung innerhalb des dreidimensionalen Raums.
-- Drehen.
-- Neigen.
-- Zoomen.
-- Zentrieren ausgewählter Objekte.
-- Wechsel zu gespeicherten beziehungsweise bekannten Positionen.
-
-## 6.2 Objektfokus
-
-Bei Auswahl eines Sternensystems kann die Kamera dieses automatisch in den Fokus nehmen.
-
-Dabei bleibt die räumliche Orientierung erhalten.
-
-Die Bewegung soll visuell nachvollziehbar sein, damit der Spieler seine Position innerhalb der Galaxie nicht unnötig verliert.
-
-## 6.3 Kartenübergang
-
-Wird ein ausgewähltes Sternensystem geöffnet, erfolgt ein Übergang von der Galaxieansicht in die Sternensystemansicht.
-
-Der Übergang soll deutlich machen, dass der Spieler von einer übergeordneten strategischen Karte in ein einzelnes Sternensystem wechselt.
-
-Beim Verlassen des Systems erfolgt die Rückkehr zur Galaxieansicht.
-
-Die vorherige Kartenposition und Orientierung sollen dabei wiederhergestellt werden können.
-
----
-
-# 7. Dreidimensionale Sternensystemansicht
-
-## 7.1 Grundprinzip
-
-Jedes auswählbare Sternensystem besitzt eine eigene dreidimensionale Systemansicht.
-
-Diese stellt die astronomischen Objekte innerhalb des Systems räumlich dar.
-
-Im Gegensatz zur Galaxiekarte werden hier nicht die Entfernungen zwischen Sternensystemen, sondern die lokalen Positionen und Umlaufbahnen innerhalb eines Systems sichtbar.
-
-## 7.2 Einzelsternsysteme
-
-Bei einem System mit einem einzelnen Zentralstern bildet dieser den räumlichen Mittelpunkt.
-
-Planeten und weitere zugehörige Objekte bewegen sich auf ihren festgelegten Bahnen um diesen Stern.
-
-Die Kamera öffnet das System zunächst mit einer sinnvollen Übersicht.
-
-## 7.3 Doppelsternsysteme
-
-Ein Doppelsternsystem besitzt zwei Sternkomponenten.
-
-Diese können auf festen Bahnen um einen gemeinsamen Schwerpunkt dargestellt werden.
-
-Planeten können, abhängig von ihrer Konfiguration, einen einzelnen Stern oder beide Sterne gemeinsam umkreisen.
-
-Die Darstellung orientiert sich an den vorhandenen astronomischen Daten beziehungsweise an plausiblen generierten Bahnen.
-
-## 7.4 Mehrfachsternsysteme
-
-Sternensysteme mit mehr als zwei Sternen verwenden eine geeignete hierarchische Orbitalstruktur.
-
-Dadurch können unterschiedliche Komponenten ihre festgelegten Bahnen um die jeweils passenden Zentren beschreiben.
-
-Es findet auch hier keine Gravitationssimulation statt.
-
-## 7.5 Planeten
-
-Planeten werden als räumlich positionierte astronomische Kartenobjekte dargestellt.
-
-Eine detaillierte, frei bebaubare dreidimensionale Planetenoberfläche ist ausdrücklich nicht vorgesehen.
-
-Für die Sternensystemansicht genügen geeignete Symbole oder vereinfachte visuelle Darstellungen.
-
-Die tatsächliche Kolonieverwaltung findet in einem zweidimensionalen Fenster statt.
-
-## 7.6 Monde
-
-Monde besitzen eine feste Umlaufbahn um ihren jeweiligen Planeten.
-
-Sie bewegen sich gemeinsam mit dem Planeten um das übergeordnete Orbitalzentrum.
-
-Ihre aktuelle räumliche Position ergibt sich aus dieser hierarchischen Zuordnung.
-
-## 7.7 Asteroiden und Kleinkörper
-
-Asteroidengürtel sollen als astronomisch plausible Ansammlungen kleiner Objekte dargestellt werden.
-
-Die Darstellung kann vereinfacht werden, wenn sehr viele Kleinkörper vorhanden sind.
-
-Einzelne wirtschaftlich oder spielerisch relevante Asteroiden können separat auswählbar sein.
-
-## 7.8 Künstliche Objekte
-
-Die Sternensystemansicht soll später auch künstliche Objekte anzeigen.
+Sie ist ausschließlich für die galaktische Ebene zuständig.
 
 Dazu gehören:
 
-- Raumstationen.
-- Raumhäfen beziehungsweise orbitale Einrichtungen.
-- Sprungtore.
-- Raumschiffe.
-- Raumflotten.
-- Weitere Weltrauminfrastruktur.
+- Darstellung von Sternensystemen.
+- Dreidimensionale Sternpositionen.
+- Räumliche Navigation.
+- Systemauswahl.
+- Interstellare Flugrouten.
+- Darstellung von Raumflotten.
+- Darstellung politischer Einflussbereiche.
+- Anzeige von Kolonien.
+- Anzeige interstellarer Transportverbindungen.
+- Anzeige von Sprungtoren.
+- Strategische Informationsfilter.
 
-Ihre Positionen werden vom jeweiligen Spielsystem bereitgestellt.
+Die Galaxiekarte ist nicht für die Darstellung des Inneren einzelner Sternensysteme zuständig.
 
-Nicht jedes künstliche Objekt muss zwingend einer natürlichen Planetenumlaufbahn folgen.
+## 1.3 Abgrenzung zur Sternensystemansicht
 
----
+Die dreidimensionale Ansicht eines einzelnen Sternensystems ist ein vollständig eigenständiges Spielsystem.
 
-# 8. Feste Umlaufbahnen
+Sie gehört ausdrücklich nicht zum Funktionsumfang der Galaxiekarte.
 
-## 8.1 Verbindliche Regel
+Die Galaxiekarte stellt daher nicht selbst dar:
 
-**Alle natürlichen astronomischen Objekte bewegen sich auf festgelegten Umlaufbahnen.**
-
-Es wird keine dynamische Gravitationssimulation durchgeführt.
-
-Die Umlaufbahnen werden aus astronomischen Daten übernommen oder einmalig prozedural generiert.
-
-Anschließend werden ihre Eigenschaften gespeichert.
-
-## 8.2 Bahnparameter
-
-Eine Umlaufbahn kann durch folgende Eigenschaften beschrieben werden:
-
-| Eigenschaft | Bedeutung |
-|---|---|
-| Orbitalzentrum | Stern, Planet oder gemeinsamer Schwerpunkt |
-| Große Halbachse | Geometrische Größe der Bahn |
-| Exzentrizität | Abweichung von einer kreisförmigen Bahn |
-| Inklination | Neigung der Bahnebene |
-| Aufsteigender Knoten | Räumliche Ausrichtung |
-| Argument des Perizentrums | Orientierung der Bahnellipse |
-| Ausgangsphase | Position zu einem definierten Zeitpunkt |
-| Umlaufperiode | Dauer eines vollständigen Umlaufs |
-| Bezugsepoche | Zeitlicher Ausgangspunkt der Bahn |
-
-Die genaue mathematische Darstellung wird in einem späteren technischen Dokument beschrieben.
-
-## 8.3 Keine Gravitationssimulation
-
-Die Simulation berechnet nicht fortlaufend die Gravitationskräfte zwischen den Himmelskörpern.
-
-Insbesondere entstehen keine dynamischen Änderungen durch:
-
-- Gegenseitige gravitative Störungen.
-- Numerische N-Körper-Simulationen.
-- Veränderungen der Stern- oder Planetenmassen.
-- Automatisch entstehende neue Orbitkonfigurationen.
-
-Die festgelegten Bahnen bleiben während des regulären Spielverlaufs erhalten.
-
-## 8.4 Bewegung abhängig von der Spielzeit
-
-Die Position eines Planeten hängt von seiner Umlaufbahn und der aktuellen Spielzeit ab.
-
-Wird das Spiel pausiert, steht der Planet still.
-
-Wird die Zeit beschleunigt, bewegt sich der Planet entsprechend schneller auf seiner Bahn.
-
-Bei identischer Spielzeit und identischen Bahndaten muss die Position reproduzierbar sein.
-
-## 8.5 Astronomische Genauigkeit
-
-Sind ausreichend wissenschaftliche Bahndaten vorhanden, sollen diese verwendet werden.
-
-Fehlende Parameter können plausibel ergänzt werden.
-
-Dabei muss zwischen tatsächlichen Messdaten und generierten Eigenschaften unterschieden werden.
-
-Die Position einer teilweise unbekannten Umlaufbahn darf nicht als vollständig wissenschaftlich bestimmt ausgegeben werden.
-
-## 8.6 Sichtbare Umlaufbahnen
-
-Umlaufbahnen sollen optional als Linien dargestellt werden können.
-
-Vorgesehen sind folgende Anzeigemöglichkeiten:
-
-- Alle relevanten Umlaufbahnen.
-- Nur die Bahn des ausgewählten Objekts.
-- Ausgeblendete Umlaufbahnen.
-- Zusätzliche Bahndaten des ausgewählten Objekts.
-
-Die Linien dienen der visuellen Orientierung.
-
----
-
-# 9. Objektverfolgung und Planetenverwaltung
-
-## 9.1 Planetenfokus
-
-Wählt der Spieler einen Planeten aus, kann die Kamera dessen Bewegung verfolgen.
-
-Der Planet bleibt dabei im Zentrum der Ansicht.
-
-Die Kamera passt ihre Position entsprechend der aktuellen Umlaufposition an.
-
-## 9.2 Verwaltung öffnen
-
-Für besiedelte oder kolonisierbare Planeten kann ein eigenes Verwaltungsfenster geöffnet werden.
-
-Die Kamera bleibt währenddessen auf den betreffenden Planeten ausgerichtet.
-
-Die Verwaltung selbst wird in einer zweidimensionalen Benutzeroberfläche angezeigt.
-
-## 9.3 Trennung von Karte und Verwaltung
-
-Die Sternensystemansicht zeigt:
-
-- Lage des Planeten.
-- Umlaufbahn.
-- Zugehörigen Stern.
+- Einzelne Planeten innerhalb eines Sternensystems.
 - Monde.
-- Astronomische Eigenschaften.
-- Vorhandene künstliche Objekte.
+- Planetare Umlaufbahnen.
+- Die Bewegung von Planeten um Sterne.
+- Die Bewegung von Monden um Planeten.
+- Asteroidengürtel innerhalb eines Sternensystems.
+- Die räumliche Anordnung planetarer Einrichtungen.
+- Die lokale Kamerasteuerung innerhalb eines Sternensystems.
 
-Die Planetenverwaltung zeigt dagegen:
+Diese Funktionen werden später in einem eigenen Konzept für Sternensystemansichten beschrieben.
 
-- Kachelraster.
-- Gebäude.
-- Bevölkerung.
-- Ressourcen.
-- Produktion.
-- Wohnraum.
-- Bildung.
-- Weitere Koloniewerte.
+Ein Sternensystem erscheint auf der Galaxiekarte zunächst als auswählbares astronomisches Systemobjekt.
 
-Die Map darf nicht versuchen, diese planetaren Verwaltungsfunktionen auf einer dreidimensionalen Kugel abzubilden.
+Eine spätere Verbindung zwischen Galaxiekarte und Sternensystemansicht ist möglich. Derzeit werden dafür jedoch keine konkreten Übergänge, Kameraanimationen oder Bedienabläufe festgelegt.
 
-## 9.4 Planetengröße und Kacheln
+## 1.4 Abgrenzung zur Planetenverwaltung
 
-Die bereits vereinbarte Kachelskalierung bleibt Bestandteil des gesamten Spielkonzepts.
+Die Verwaltung einzelner Planeten gehört ebenfalls nicht zur Galaxiekarte.
 
-Ein erdgroßer Planet besitzt 60 Verwaltungskacheln.
+Die Galaxiekarte stellt weder das zweidimensionale Kachelraster eines Planeten noch dessen Gebäude und Produktionsanlagen dar.
 
-Andere Planeten werden proportional zu ihrer Oberfläche skaliert.
+Sie kann lediglich strategische Informationen über vorhandene Kolonien anzeigen.
 
-Die genaue Anzahl der Kacheln ist für die Darstellung der Sternenkarte selbst nicht entscheidend, muss aber bei der Übergabe an die Planetenverwaltung korrekt verfügbar sein.
+Beispielsweise:
+
+- Anzahl der Kolonien innerhalb eines Systems.
+- Eigentümerfraktion.
+- Bevölkerungsgröße.
+- Wirtschaftliche Bedeutung.
+- Aktuelle Versorgungslage.
+
+Die eigentliche Koloniesimulation und ihre Benutzeroberfläche bleiben eigenständige Systeme.
+
+## 1.5 Abgrenzung zu StellarForge
+
+StellarForge wird als eigenständiges zukünftiges Konzept behandelt.
+
+Die Entwicklung, Architektur und Funktionsweise von StellarForge sind ausdrücklich nicht Bestandteil dieses Dokuments.
+
+Das betrifft insbesondere:
+
+- Verfahren zur Erzeugung zusätzlicher Sternensysteme.
+- Verteilung generierter Sterne.
+- Generierung von Planeten.
+- Generierung astronomischer Umlaufbahnen.
+- Erzeugung von Planeteneigenschaften.
+- Eigene Algorithmen und Datenmodelle von StellarForge.
+
+StellarForge erhält später ein separates Dokument.
+
+Die Galaxiekarte soll unabhängig davon funktionieren, woher die ihr bereitgestellten Sternensystemdaten stammen.
 
 ---
 
-# 10. Astronomische Objektinformationen
+# 2. Aufbau der galaktischen Spielwelt
 
-## 10.1 Sterne
+## 2.1 Die Milchstraße
 
-Bei Auswahl eines Sterns können die verfügbaren Eigenschaften angezeigt werden.
+Die Galaxiekarte bildet die Milchstraße als dreidimensionalen astronomischen Raum ab.
+
+Die langfristige Zielsetzung ist eine möglichst umfangreiche Darstellung unserer Galaxie.
+
+Die vorhandenen wissenschaftlichen Sternkataloge dienen dabei als Grundlage.
+
+Der dargestellte Raum ist nicht als flache Spielkarte mit lediglich simulierten Höhenunterschieden aufgebaut.
+
+Stattdessen besitzt jedes Sternensystem eine tatsächliche dreidimensionale Position.
+
+## 2.2 Dreidimensionale Sternverteilung
+
+Jedes Sternensystem besitzt eine Position innerhalb eines einheitlichen galaktischen Koordinatenraums.
+
+Die räumlichen Beziehungen zwischen den Sternen müssen erhalten bleiben.
+
+Ein Stern, der sich oberhalb oder unterhalb einer gewählten Referenzebene befindet, muss auch entsprechend im Raum erscheinen.
+
+Der Spieler muss die Karte drehen und neigen können, um diese räumlichen Unterschiede erkennen zu können.
+
+## 2.3 Astronomische Entfernungen
+
+Die Entfernung zwischen zwei Sternensystemen ergibt sich aus ihren dreidimensionalen Positionen.
+
+Diese Entfernung bildet unter anderem die Grundlage für die interstellare Navigation.
+
+Die Karte darf Sternpositionen nicht verändern, nur um gleichmäßigere Abstände oder ein optisch einfacheres Navigationsnetz zu erzeugen.
+
+Die tatsächlichen Entfernungen sind für die räumliche Darstellung und die Spielsimulation maßgeblich.
+
+## 2.4 Sternensystem als Kartenobjekt
+
+Ein Sternensystem wird auf der Galaxiekarte als zusammengehöriges Objekt behandelt.
+
+Das gilt sowohl für Einzelsternsysteme als auch für Doppel- und Mehrfachsternsysteme.
+
+Ein Mehrfachsternsystem soll nicht automatisch als mehrere unabhängig anwählbare interstellare Reiseziele erscheinen.
+
+Die einzelnen Sternkomponenten gehören zu einem gemeinsamen System.
+
+Eine spätere eigenständige Sternensystemansicht kann diese Komponenten detailliert darstellen.
+
+## 2.5 Systemidentifikation
+
+Jedes Sternensystem besitzt eine dauerhafte interne Kennung.
+
+Die Kennung ist unabhängig vom Anzeigenamen.
+
+Ein System kann mehrere wissenschaftliche Bezeichnungen besitzen.
+
+Beispielsweise:
+
+- Gebräuchlicher Sternname.
+- Gaia-Kennung.
+- Hipparcos-Kennung.
+- Weitere wissenschaftliche Katalogkennungen.
+- Alternative historische Bezeichnungen.
+
+Die Sternensuche soll diese Bezeichnungen berücksichtigen können.
+
+---
+
+# 3. Astronomische Datengrundlage
+
+## 3.1 Reale astronomische Daten
+
+Die Galaxiekarte basiert primär auf öffentlich zugänglichen wissenschaftlichen Sternkatalogen.
+
+Für die Darstellung sind insbesondere folgende Informationen relevant:
+
+- Astronomische Position.
+- Räumliche Entfernung.
+- Sternidentifikation.
+- Spektralklasse.
+- Farbe.
+- Helligkeit.
+- Temperatur.
+- Weitere verfügbare Sternparameter.
+
+Die Karte verwendet die Daten, die ihr von der astronomischen Datenbasis bereitgestellt werden.
+
+Sie ist nicht selbst für die wissenschaftliche Analyse oder Erzeugung fehlender Werte zuständig.
+
+## 3.2 Gaia
+
+Gaia bildet die wichtigste vorgesehene Grundlage für die Positionierung großer Sternpopulationen.
+
+Als erste Referenz dient Gaia DR3.
+
+Relevante Angaben können sein:
+
+- Rektaszension.
+- Deklination.
+- Parallaxe.
+- Eigenbewegung.
+- Radialgeschwindigkeit.
+- Photometrische Eigenschaften.
+- Weitere astrophysikalische Parameter.
+
+Aus diesen Informationen können geeignete räumliche Positionen abgeleitet werden.
+
+Die zugrunde liegenden wissenschaftlichen Unsicherheiten müssen berücksichtigt werden.
+
+## 3.3 Hipparcos
+
+Hipparcos dient als ergänzende astronomische Datenquelle.
+
+Insbesondere können zusätzliche Sternkennungen und Referenzinformationen verwendet werden.
+
+Sterne, die in mehreren Katalogen vorkommen, dürfen nicht doppelt auf der Galaxiekarte erscheinen.
+
+## 3.4 Weitere astronomische Datenquellen
+
+Die Galaxiekarte soll grundsätzlich unabhängig von einer einzelnen astronomischen Datenquelle sein.
+
+Weitere Kataloge können die bestehende Datenbasis ergänzen.
+
+Die Auswahl, Zusammenführung und wissenschaftliche Bewertung solcher Quellen wird nicht innerhalb der Galaxiekarte durchgeführt.
+
+Die Karte erhält daraus einen einheitlichen Bestand von Sternensystemobjekten.
+
+## 3.5 Wissenschaftliche Datenherkunft
+
+Die Herkunft astronomischer Informationen muss nachvollziehbar bleiben.
+
+Vorgesehen sind mindestens folgende Kategorien:
+
+| Kategorie | Bedeutung |
+|---|---|
+| Beobachtet | Wissenschaftlich gemessener Wert |
+| Geschätzt | Wissenschaftlich abgeleiteter Wert |
+| Generiert | Künstlich erzeugter Wert |
+| Fiktiv | Bewusst erfundenes Spielelement |
+
+Die Karte soll diese Herkunft bei Bedarf anzeigen können.
+
+Ein wissenschaftlich katalogisierter Stern soll nicht ohne Kennzeichnung mit einem fiktiven Stern gleichgesetzt werden.
+
+## 3.6 Datenqualität
+
+Astronomische Messwerte können unvollständig oder unsicher sein.
+
+Die Karte muss damit umgehen können, dass bestimmte Eigenschaften fehlen.
+
+Fehlende Daten dürfen nicht automatisch als Nullwerte oder als wissenschaftlich bestätigte Eigenschaften dargestellt werden.
+
+Wenn eine Eigenschaft unbekannt ist, kann sie entsprechend gekennzeichnet oder aus der Informationsanzeige ausgeblendet werden.
+
+## 3.7 Einheitliches Kartenmodell
+
+Die Galaxiekarte verwendet einen einheitlichen Bestand von Sternensystemen.
+
+Die Herkunft aus unterschiedlichen Katalogen darf für die grundlegende Kartenbedienung keine Rolle spielen.
+
+Alle Sternensysteme unterstützen dieselben grundlegenden Funktionen:
+
+- Anzeige.
+- Auswahl.
+- Fokussierung.
+- Suche.
+- Entfernungsbestimmung.
+- Navigation.
+- Strategische Informationsdarstellung.
+
+---
+
+# 4. Visuelle Gestaltung nach Elite Dangerous
+
+## 4.1 Grundlegendes Erscheinungsbild
+
+Die Galaxiekarte soll optisch möglichst eng an der Galaxiekarte von Elite Dangerous orientiert sein.
+
+Im Mittelpunkt steht ein dreidimensionaler Sternenraum mit einer dunklen, technisch wirkenden Benutzeroberfläche.
+
+Die Darstellung soll übersichtlich, präzise und hochwertig wirken.
+
+Sie soll weniger an eine klassische Strategie-Weltkarte erinnern, sondern stärker an ein interstellares Navigationssystem.
+
+## 4.2 Hintergrund
+
+Der Hintergrund der Karte ist überwiegend dunkel.
+
+Er kann eine visuelle Darstellung der Milchstraße und ihrer Sternenpopulation enthalten.
+
+Der Hintergrund darf jedoch nicht mit den tatsächlich auswählbaren Sternensystemen verwechselt werden.
+
+Daher wird zwischen folgenden Elementen unterschieden:
+
+**Astronomische Kartenobjekte**
+
+Sternensysteme mit tatsächlichen räumlichen Koordinaten und eigener Identifikation.
+
+**Visueller Hintergrund**
+
+Nicht unmittelbar auswählbare grafische Elemente zur Darstellung der galaktischen Umgebung.
+
+Der Hintergrund dient der Atmosphäre und der räumlichen Orientierung.
+
+Er verändert nicht die Positionen der Kartenobjekte.
+
+## 4.3 Darstellung der Sterne
+
+Sternensysteme werden durch leuchtende Markierungen dargestellt.
+
+Die Darstellung soll sich an der Sternensymbolik von Elite Dangerous orientieren.
+
+Berücksichtigt werden können:
+
+- Farbe entsprechend dem Sterntyp.
+- Helligkeit.
+- Entfernung.
+- Auswahlstatus.
+- Strategische Bedeutung.
+- Aktive Hervorhebung.
+
+Die sichtbare Größe der Markierung muss nicht dem tatsächlichen Radius des Sterns entsprechen.
+
+Wesentlich ist eine gute Erkennbarkeit bei unterschiedlichen Zoomstufen.
+
+## 4.4 Tiefenwirkung
+
+Ein zentrales Gestaltungsmerkmal ist die klare Wahrnehmbarkeit der dritten Dimension.
+
+Diese wird unter anderem unterstützt durch:
+
+- Perspektivische Darstellung.
+- Unterschiedliche scheinbare Sternabstände.
+- Kamerabewegung.
+- Räumliche Referenzlinien.
+- Ein optionales Orientierungsgitter.
+- Höhenlinien zwischen Sternpositionen und Referenzebene.
+- Sichtbare Parallaxe bei Kamerabewegungen.
+
+Die Karte darf auch bei hoher Sternendichte nicht wie eine flache Punktwolke wirken.
+
+## 4.5 Orientierungsgitter
+
+Wie bei Elite Dangerous soll ein räumliches Orientierungsgitter vorgesehen werden.
+
+Dieses dient als visuelle Referenz für die Position und Entfernung von Sternensystemen.
+
+Das Gitter darf die tatsächlichen Sternpositionen nicht verändern.
+
+Es stellt ausschließlich eine Orientierungshilfe dar.
+
+## 4.6 Referenzebene
+
+Das Orientierungsgitter kann auf einer horizontalen Referenzebene dargestellt werden.
+
+Sterne befinden sich abhängig von ihren tatsächlichen Positionen oberhalb oder unterhalb dieser Ebene.
+
+Die Referenzebene selbst ist kein physikalisches Hindernis und keine Grenze des spielbaren Raums.
+
+## 4.7 Projektionslinien
+
+Für ausgewählte Sternensysteme können Verbindungslinien zwischen ihrer räumlichen Position und der Referenzebene dargestellt werden.
+
+Dadurch wird ihre Höhe beziehungsweise Tiefe im dreidimensionalen Raum besser erkennbar.
+
+Diese Darstellung orientiert sich an der räumlichen Lesbarkeit der Elite-Dangerous-Galaxiekarte.
+
+Die Projektionslinien sind keine Flugrouten.
+
+## 4.8 Auswahlmarkierungen
+
+Ein ausgewähltes Sternensystem erhält eine deutlich sichtbare Hervorhebung.
+
+Vorgesehen sind:
+
+- Leuchtende Auswahlmarkierung.
+- Fokusrahmen oder Auswahlring.
+- Hervorgehobener Systemname.
+- Sichtbare räumliche Orientierung.
+- Optional hervorgehobene Projektionslinie.
+- Verbindung zum Informationsfenster.
+
+Die Markierung soll auch bei vielen umliegenden Sternen eindeutig erkennbar bleiben.
+
+## 4.9 Farben
+
+Die Farbgestaltung orientiert sich am technisch-futuristischen Stil von Elite Dangerous.
+
+Als visuelle Ausgangsrichtung sind geeignet:
+
+- Dunkle Hintergründe.
+- Weißliche oder farblich zum Stern passende Sternmarkierungen.
+- Cyan- und Blautöne für ausgewählte technische Informationen.
+- Orange beziehungsweise warme Akzentfarben für wichtige Bedien- und Navigationsinformationen.
+- Dezente transparente Informationsebenen.
+
+Die genaue Farbpalette bleibt Teil des eigenständigen Designs von Project Sagittarius.
+
+## 4.10 Visuelle Zurückhaltung
+
+Die Karte soll keine unnötig aufwendigen Effekte verwenden, die die Orientierung erschweren.
+
+Bewegungen, Glüheffekte und Animationen sollen dem Verständnis der Karte dienen.
+
+Im Vordergrund stehen:
+
+- Sternpositionen.
+- Entfernungen.
+- Auswahl.
+- Routen.
+- Strategische Informationen.
+
+---
+
+# 5. Kamerasteuerung
+
+## 5.1 Bedienphilosophie
+
+Die Kamerasteuerung soll sich am Bediengefühl der Galaxiekarte von Elite Dangerous orientieren.
+
+Sie muss dem Spieler erlauben, sich frei und präzise innerhalb des dreidimensionalen Sternenraums zu orientieren.
+
+Der Spieler soll nicht an vorgegebene Kamerawinkel gebunden sein.
+
+## 5.2 Freie Kamerabewegung
+
+Vorgesehen sind:
+
+- Dreidimensionales Verschieben der Ansicht.
+- Drehen um einen Fokuspunkt.
+- Neigen der Kamera.
+- Zoomen.
+- Zentrieren ausgewählter Systeme.
+- Wechsel zwischen unterschiedlichen Maßstäben.
+- Rückkehr zu einer vorherigen Kartenposition.
+
+## 5.3 Rotation
+
+Die Karte soll sich um den aktuellen Fokuspunkt drehen lassen.
+
+Dadurch kann der Spieler die Sternenverteilung aus verschiedenen Richtungen betrachten.
+
+Die Rotation soll flüssig und nachvollziehbar erfolgen.
+
+Der Fokuspunkt soll dabei möglichst stabil bleiben.
+
+## 5.4 Neigung
+
+Die Kamera soll frei geneigt werden können.
+
+Dadurch lässt sich die räumliche Anordnung von Sternensystemen oberhalb und unterhalb der Referenzebene betrachten.
+
+Die Bedienung muss auch bei starken Neigungswinkeln verständlich bleiben.
+
+## 5.5 Verschieben
+
+Die Kamera kann unabhängig vom aktuellen Fokus durch den galaktischen Raum bewegt werden.
+
+Das Verschieben soll sich direkt und präzise anfühlen.
+
+Der Spieler muss nicht jedes Mal ein neues Sternensystem auswählen, um die Ansicht zu bewegen.
+
+## 5.6 Zoom
+
+Die Galaxiekarte benötigt einen großen Zoombereich.
+
+Der Spieler soll zwischen der nahen Betrachtung einzelner Sternensysteme und der Übersicht größerer Sternregionen wechseln können.
+
+Das Zoomverhalten soll sich an Elite Dangerous orientieren.
+
+Insbesondere soll es:
+
+- Flüssig sein.
+- Unterschiedliche Größenordnungen sinnvoll abdecken.
+- Den aktuellen Fokus berücksichtigen.
+- Keine abrupten ungewollten Positionswechsel verursachen.
+
+## 5.7 Fokus auf ein Sternensystem
+
+Der Spieler kann ein Sternensystem auswählen und die Kamera darauf zentrieren.
+
+Die Kamera bewegt sich zu einer geeigneten Betrachtungsposition.
+
+Die umliegenden Sterne sollen weiterhin erkennbar bleiben, damit der räumliche Zusammenhang erhalten bleibt.
+
+## 5.8 Wechsel des Fokus
+
+Wählt der Spieler ein anderes System aus, soll die Kamera entsprechend neu ausgerichtet werden können.
+
+Der Wechsel soll nachvollziehbar sein und keine unnötige Desorientierung erzeugen.
+
+## 5.9 Rückkehr zum vorherigen Fokus
+
+Der Spieler soll zu einer vorherigen Kartenposition oder einem zuvor ausgewählten Sternensystem zurückkehren können.
+
+Auch eine Rückkehr zum Sonnensystem oder zur Hauptstadt der eigenen Fraktion soll als Kartenfunktion vorgesehen werden.
+
+## 5.10 Eingabegeräte
+
+Die Karte wird vorrangig für Maus und Tastatur konzipiert.
+
+Die Bedienung soll direkte Mausinteraktionen für Auswahl, Drehen, Verschieben und Zoomen ermöglichen.
+
+Konkrete Tastenbelegungen bleiben noch offen.
+
+Die grundlegenden Bewegungsarten und das Bediengefühl sollen sich jedoch deutlich an Elite Dangerous orientieren.
+
+## 5.11 Grenzen der Kamerabewegung
+
+Die Kamera soll den vorgesehenen galaktischen Datenraum sinnvoll erkunden können.
+
+Sie darf nicht auf eine einzige Kartenebene beschränkt sein.
+
+Die konkreten Grenzen des darstellbaren und bespielbaren Bereichs werden später festgelegt.
+
+---
+
+# 6. Benutzeroberfläche
+
+## 6.1 Grundaufbau
+
+Die Galaxiekarte erhält eine eigenständige Benutzeroberfläche.
+
+Der Grundaufbau soll sich an der Galaxiekarte von Elite Dangerous orientieren.
+
+Dabei stehen die dreidimensionale Sternenansicht und ihre Bedienbarkeit im Vordergrund.
+
+Informationsfenster sollen die räumliche Darstellung ergänzen, aber nicht unnötig verdecken.
+
+## 6.2 Zentrale Kartenfläche
+
+Der größte Teil des Bildschirms wird von der dreidimensionalen Sternenkarte eingenommen.
+
+Hier erfolgt die eigentliche Navigation.
+
+Sternensysteme können direkt ausgewählt werden.
+
+Routen, Markierungen und strategische Informationen werden als zusätzliche Ebenen dargestellt.
+
+## 6.3 Informationsbereiche
+
+Die Benutzeroberfläche kann seitliche Informationsbereiche verwenden.
+
+Diese enthalten beispielsweise:
+
+- Ausgewähltes Sternensystem.
+- Astronomische Eigenschaften.
+- Suche.
+- Filter.
+- Navigationsinformationen.
+- Fraktionsinformationen.
+- Vorhandene Kolonien.
+- Strategische Markierungen.
+
+Die genaue räumliche Anordnung der einzelnen Bereiche wird im späteren UI-Konzept festgelegt.
+
+Die grundsätzliche Panel-Bedienung soll jedoch dem funktionalen Stil von Elite Dangerous entsprechen.
+
+## 6.4 Kontextbezogene Informationen
+
+Die Oberfläche soll nicht ständig sämtliche verfügbaren Daten anzeigen.
+
+Stattdessen werden Informationen abhängig von der aktuellen Auswahl und Kartenansicht eingeblendet.
+
+Ein nicht ausgewählter Stern kann beispielsweise nur durch seine Markierung dargestellt werden.
+
+Nach der Auswahl erscheinen zusätzliche Informationen.
+
+## 6.5 Bedienaktionen
+
+Für ein ausgewähltes Sternensystem sollen geeignete Aktionen verfügbar sein.
 
 Beispiele:
 
-- Name und alternative Bezeichnungen.
-- Spektralklasse.
-- Temperatur.
-- Masse.
-- Radius.
-- Leuchtkraft.
-- Entfernung.
-- Zugehöriges Sternensystem.
-- Datenherkunft.
+- System fokussieren.
+- Astronomische Informationen anzeigen.
+- Als Navigationsziel markieren.
+- Route berechnen.
+- In Such- oder Favoritenlisten übernehmen.
+- Strategische Informationen anzeigen.
 
-Nicht bekannte Eigenschaften werden entsprechend gekennzeichnet.
+Weitere Aktionen können später durch andere Spielsysteme bereitgestellt werden.
 
-## 10.2 Planeten
+## 6.6 Kartenmodus
 
-Bei Auswahl eines Planeten sollen unter anderem folgende Informationen angezeigt werden können:
+Die Galaxiekarte soll unterschiedliche Informationsmodi unterstützen.
 
-- Planetenname.
-- Planetenklasse.
-- Zentralstern.
-- Radius.
-- Masse.
-- Temperatur.
-- Atmosphärische Eigenschaften.
-- Umlaufperiode.
-- Entfernung zum Zentralstern.
-- Monde.
-- Bewohnbarkeit.
-- Kolonisierungsstatus.
+Der Spieler kann beispielsweise zwischen einer astronomischen und einer politischen Ansicht wechseln.
 
-## 10.3 Planetenklassen
+Der zugrunde liegende dreidimensionale Raum bleibt dabei unverändert.
 
-Die Klassifikation orientiert sich am erweiterten, aus Star Trek bekannten Buchstabensystem.
+## 6.7 Darstellung bei hohen Auflösungen
 
-Sie wird durch eigene eindeutige Definitionen für Project Sagittarius umgesetzt.
+Die Bedienoberfläche soll auch bei großen Bildschirmauflösungen übersichtlich bleiben.
 
-Die Planetenklasse dient zur Beschreibung der Umwelt.
+Informationsfenster dürfen nicht unnötig viel Platz beanspruchen.
 
-Die tatsächliche Bewohnbarkeit ist abhängig von den biologischen Eigenschaften der jeweiligen Spezies.
-
-Ein Planet der Klasse M kann für Menschen geeignet sein, für eine andere Spezies jedoch ungeeignet.
-
-Umgekehrt können für Menschen lebensfeindliche Welten von entsprechend angepassten Spezies bewohnt werden.
-
-## 10.4 Bewohnbarkeit als Karteninformation
-
-Die Map kann die Bewohnbarkeit eines Planeten für die ausgewählte Spezies anzeigen.
-
-Die eigentliche Berechnung erfolgt im planetaren Bewohnbarkeitssystem.
-
-Die Karte übernimmt das Ergebnis und stellt es verständlich dar.
+Die Sternenkarte bleibt das zentrale visuelle Element.
 
 ---
 
-# 11. Interstellare Navigation
+# 7. Auswahl und Suche von Sternensystemen
 
-## 11.1 Rolle der Sternenkarte
+## 7.1 Direkte Auswahl
 
-Die Sternenkarte dient als zentrale Oberfläche zur Planung und Darstellung interstellarer Reisen.
+Der Spieler kann ein Sternensystem direkt auf der Karte auswählen.
 
-Der Spieler kann Start- und Zielsysteme auswählen und die geplante Reiseroute anzeigen lassen.
+Das ausgewählte Objekt wird hervorgehoben.
 
-Die Route wird unter Berücksichtigung tatsächlicher dreidimensionaler Sternentfernungen und der bestehenden Raumfahrttechnologien berechnet.
+Die zugehörigen Informationen erscheinen in der Kartenoberfläche.
 
-## 11.2 Warpantrieb
+## 7.2 Auswahl in dichter Sternumgebung
 
-Die Raumfahrt verwendet neun Warpstufen.
+Bei hoher Sternendichte können mehrere Kartenobjekte nahe beieinander erscheinen.
 
-Die bisher vorgeschlagenen Geschwindigkeiten sind:
+Die Auswahl muss trotzdem eindeutig und zuverlässig möglich sein.
+
+Die visuelle Hervorhebung soll erkennen lassen, welches System ausgewählt wurde.
+
+## 7.3 Suche nach Namen
+
+Der Spieler soll Sternensysteme anhand ihres Namens suchen können.
+
+Die Suche berücksichtigt auch alternative Bezeichnungen.
+
+## 7.4 Suche nach Katalogkennungen
+
+Zusätzlich sollen wissenschaftliche Katalogidentifikatoren verwendet werden können.
+
+Beispielsweise Gaia- oder Hipparcos-Kennungen.
+
+Dadurch kann der Spieler reale astronomische Objekte auch dann finden, wenn sie keinen allgemein bekannten Namen besitzen.
+
+## 7.5 Suchergebnisse
+
+Die Suche liefert eine Liste passender Sternensysteme.
+
+Ein Suchergebnis kann ausgewählt und auf der Karte fokussiert werden.
+
+Die Karte soll dabei nicht automatisch eine interstellare Reise auslösen.
+
+## 7.6 Favoriten und Markierungen
+
+Als zusätzliche Kartenfunktion werden Favoriten beziehungsweise gespeicherte Sternensystemmarkierungen vorgesehen.
+
+Sie können beispielsweise für folgende Zwecke verwendet werden:
+
+- Wichtige Kolonien.
+- Strategische Systeme.
+- Interessante astronomische Objekte.
+- Geplante Expansionsziele.
+- Relevante Verkehrsknoten.
+
+Die genaue Verwaltung dieser Markierungen bleibt offen.
+
+---
+
+# 8. Astronomische Informationsanzeige
+
+## 8.1 Informationsumfang
+
+Nach Auswahl eines Sternensystems kann die Karte verfügbare astronomische Informationen anzeigen.
+
+Dazu gehören:
+
+- Systemname.
+- Alternative Bezeichnungen.
+- Astronomische Kennungen.
+- Systemposition.
+- Entfernung zu einer Referenzposition.
+- Sternklasse beziehungsweise Sternklassen.
+- Bekannte Sternkomponenten.
+- Helligkeit.
+- Weitere verfügbare physikalische Eigenschaften.
+- Herkunft und Qualität der verwendeten Daten.
+
+## 8.2 Einzel- und Mehrfachsternsysteme
+
+Die Galaxiekarte unterscheidet zwischen Einzelsternsystemen und Mehrfachsternsystemen.
+
+Ein Mehrfachsternsystem bleibt ein zusammengehöriges galaktisches Kartenobjekt.
+
+Die Informationsanzeige kann die bekannte Anzahl seiner Sternkomponenten nennen.
+
+Die räumliche Darstellung dieser Komponenten innerhalb des Sternensystems gehört nicht zur Galaxiekarte.
+
+## 8.3 Systembezogene Spielinformationen
+
+Neben astronomischen Daten können strategische Informationen angezeigt werden.
+
+Beispiele:
+
+- Eigentümerfraktion.
+- Erkundungsstatus.
+- Besiedlungsstatus.
+- Anzahl vorhandener Kolonien.
+- Vorhandene Sprungtore.
+- Raumstationen.
+- Bekannte Flotten.
+- Aktive Transportverbindungen.
+
+Diese Informationen werden von den jeweils zuständigen Spielsystemen bereitgestellt.
+
+## 8.4 Unbekannte Informationen
+
+Informationen, die der aktiven Fraktion nicht bekannt sind, dürfen nicht ohne entsprechende Berechtigung angezeigt werden.
+
+Das gilt auch dann, wenn die Spielwelt oder die astronomische Datenbasis die entsprechenden Eigenschaften bereits enthält.
+
+---
+
+# 9. Interstellare Navigation
+
+## 9.1 Aufgabe der Galaxiekarte
+
+Die Galaxiekarte dient als zentrale Oberfläche zur Planung und Anzeige interstellarer Reisen.
+
+Der Spieler kann:
+
+- Ein Ausgangssystem bestimmen.
+- Ein Zielsystem auswählen.
+- Eine Route anzeigen.
+- Die voraussichtliche Reisezeit einsehen.
+- Zwischenstationen erkennen.
+- Vorhandene Sprungtore berücksichtigen.
+- Den Verlauf einer Reise verfolgen.
+
+## 9.2 Warpantrieb
+
+Die interstellare Raumfahrt verwendet neun Warpstufen.
+
+Die bisher vorgeschlagenen Geschwindigkeiten bleiben erhalten.
 
 | Warpstufe | Lichtjahre pro Spieljahr |
 |---|---:|
@@ -702,536 +778,865 @@ Die bisher vorgeschlagenen Geschwindigkeiten sind:
 | Warp 8 | 200 |
 | Warp 9 | 300 |
 
-Diese Geschwindigkeiten sind vorläufige Balancewerte.
+Diese Werte sind vorläufige Balancewerte.
 
-Die tatsächliche Reisedauer ergibt sich aus Entfernung und Warpgeschwindigkeit.
+Die tatsächliche Reisezeit ergibt sich aus der zurückzulegenden dreidimensionalen Entfernung und der jeweiligen Warpgeschwindigkeit.
 
-Eine gemeinsam reisende Flotte orientiert sich an der Geschwindigkeit ihres langsamsten Schiffes.
+## 9.3 Flottengeschwindigkeit
 
-## 11.3 Stern-zu-Stern-Navigation
+Besteht eine Flotte aus mehreren gemeinsam reisenden Schiffen, orientiert sich die Reisegeschwindigkeit grundsätzlich am langsamsten Schiff.
 
-Interstellare Reisen erfolgen zwischen Sternensystemen.
+Die angezeigte Reisezeit muss diese Einschränkung berücksichtigen.
 
-Die Route kann über mehrere Zwischenstationen führen.
+## 9.4 Navigation zwischen Sternensystemen
 
-Der Routenplaner sucht eine zulässige, zeitlich günstige Verbindung.
+Normale interstellare Reisen erfolgen zwischen Sternensystemen.
 
-Welche zusätzlichen Regeln für maximale Einzeletappen oder die Auswahl möglicher Zwischenstationen gelten, wird später festgelegt.
+Eine Route kann über mehrere Systeme führen.
 
-## 11.4 Sprungtore
+Der Routenplaner soll eine zulässige Verbindung mit möglichst geringer Gesamtreisezeit ermitteln.
 
-Sprungtore sind von Fraktionen errichtete künstliche Einrichtungen.
+Zusätzliche Beschränkungen einzelner Warpetappen sind noch nicht abschließend festgelegt.
 
-Sie ermöglichen sofortige Reisen zwischen zugänglichen Toren.
+## 9.5 Sprungtore
 
-Die bisher festgelegten Zugriffsregeln gelten weiterhin:
+Sprungtore werden von Spieler- und KI-Fraktionen errichtet.
 
-- Eigene Sprungtore sind zugänglich.
-- Sprungtore befreundeter Fraktionen sind zugänglich.
-- Sprungtore verbündeter Fraktionen sind zugänglich.
-- Neutrale und feindliche Tore sind ohne zusätzliche Berechtigungen nicht zugänglich.
+Auf der Galaxiekarte erscheinen sie als strategische interstellare Infrastruktur.
 
-Die Map zeigt vorhandene Sprungtore und ihre Nutzbarkeit an.
+Die bestehenden Zugriffsregeln bleiben erhalten:
 
-## 11.5 Kombinierte Routen
+- Eigene Sprungtore dürfen verwendet werden.
+- Sprungtore befreundeter Fraktionen dürfen verwendet werden.
+- Sprungtore verbündeter Fraktionen dürfen verwendet werden.
+- Neutrale oder feindliche Sprungtore sind ohne zusätzliche Rechte nicht zugänglich.
 
-Eine interstellare Route kann sowohl Warpstrecken als auch Sprungtorpassagen enthalten.
+Eine Sprungtorpassage benötigt keine Spielzeit.
+
+## 9.6 Darstellung von Sprungtoren
+
+Systeme mit Sprungtoren erhalten eine geeignete zusätzliche Kartenmarkierung.
+
+Die Karte soll unterscheiden können zwischen:
+
+- Eigenem Sprungtor.
+- Zugänglichem fremdem Sprungtor.
+- Nicht zugänglichem Sprungtor.
+- Nicht funktionsfähigem Sprungtor.
+
+Die konkrete Symbolgestaltung orientiert sich am technisch-futuristischen Look der Galaxiekarte.
+
+## 9.7 Kombinierte Routen
+
+Eine Route kann Warpstrecken und Sprungtorpassagen kombinieren.
 
 Beispiel:
 
-`Startsystem → Warpstrecke → Sprungtor A → Sprungtor B → Warpstrecke → Zielsystem`
+`Startsystem → Warp → Sprungtor A → Sprungtor B → Warp → Zielsystem`
 
-Sprungtorpassagen benötigen keine Spielzeit.
+Dabei berücksichtigt die Navigation die jeweiligen Reisezeiten und Zugriffsrechte.
 
-Alle anderen zeitbeanspruchenden Reiseabschnitte werden zur Gesamtreisezeit addiert.
+## 9.8 Routenanzeige nach Elite-Dangerous-Vorbild
 
-## 11.6 Routenanzeige
+Die Darstellung interstellarer Routen soll sich an der klaren, räumlich nachvollziehbaren Routenvisualisierung von Elite Dangerous orientieren.
 
-Die Sternenkarte soll folgende Informationen darstellen können:
+Routen erscheinen als Verbindungslinien zwischen den betreffenden Sternensystemen.
 
-- Ausgangssystem.
-- Zielsystem.
+Verschiedene Arten von Verbindungen müssen erkennbar bleiben.
+
+Beispielsweise:
+
+- Normale Warpstrecke.
+- Sprungtorpassage.
+- Geplante Route.
+- Aktuell bereiste Strecke.
+- Nicht nutzbare Verbindung.
+
+Die genaue Farb- und Liniengestaltung bleibt offen.
+
+## 9.9 Keine Veränderung der Sternpositionen
+
+Die Route wird durch den realen dreidimensionalen Sternenraum dargestellt.
+
+Sternensysteme dürfen nicht für eine optisch einfachere Linienführung verschoben werden.
+
+Eine gekrümmte oder aus mehreren Segmenten bestehende grafische Darstellung darf nur die Wegführung visualisieren und nicht die astronomischen Positionen verändern.
+
+## 9.10 Reisezeit
+
+Die Karte zeigt die voraussichtliche Reisezeit einer geplanten Route.
+
+Diese berücksichtigt:
+
+- Dreidimensionale Sternentfernungen.
+- Aktuelle Warpstufe.
+- Flottenzusammensetzung.
 - Zwischenstationen.
-- Warpstrecken.
-- Sprungtorverbindungen.
-- Geschätzte Gesamtreisezeit.
-- Nicht zugängliche Verbindungen.
-- Aktueller Standort eines Schiffes.
+- Zugängliche Sprungtore.
 
-Die Darstellung soll unterschiedliche Arten von Reiseabschnitten erkennbar machen.
+Die Reisezeit ist eine spielmechanische Berechnung und keine visuelle Schätzung anhand der Bildschirmabstände.
 
-## 11.7 Änderungen während einer Reise
+## 9.11 Routenänderungen
 
 Routen können durch Ereignisse ungültig werden.
 
 Beispiele:
 
-- Ein Sprungtor wird zerstört.
 - Ein Sprungtor fällt aus.
-- Diplomatische Zugriffsrechte ändern sich.
-- Ein Zwischenziel wird unzugänglich.
+- Ein Sprungtor wird zerstört.
+- Die diplomatischen Zugriffsrechte ändern sich.
+- Ein benötigtes Zwischenziel wird unzugänglich.
 
-In solchen Fällen muss die Navigation eine erneute Routenplanung ermöglichen.
+Die Karte muss den aktuellen Routenstatus anzeigen können.
 
-Die konkrete Behandlung bereits laufender Flugabschnitte gehört zum späteren Raumfahrtkonzept.
-
----
-
-# 12. Transportnetzwerke
-
-## 12.1 Unterschied zwischen Navigation und Transport
-
-Nicht jede technisch mögliche Flugroute ist eine tatsächlich betriebene Transportverbindung.
-
-Die Sternenkarte muss daher zwischen zwei unterschiedlichen Informationen unterscheiden:
-
-**Mögliche Flugroute**
-
-Eine Verbindung, die ein geeignetes Raumschiff unter den geltenden Navigationsregeln zurücklegen könnte.
-
-**Aktive Transportlinie**
-
-Eine tatsächlich bestehende Verbindung, die von Transportschiffen bedient wird.
-
-## 12.2 Personentransport
-
-Das Bevölkerungssystem verwendet vorhandene Transportschiffe, um Bewohner zwischen Kolonien umzusiedeln.
-
-Voraussetzung sind passende Arbeitskräfteüberschüsse, ein Bedarf am Ziel und eine tatsächlich bestehende Transportverbindung.
-
-Mehrgliedrige Transportwege mit Umstiegen sind zulässig.
-
-Die Karte soll diese Verbindungen später anzeigen können.
-
-## 12.3 Warentransport
-
-Materielle Ressourcen und Produkte werden ebenfalls über geeignete Transportverbindungen zwischen Kolonien bewegt.
-
-Die Sternenkarte stellt bestehende Verbindungen, Transportwege und relevante Verkehrsknoten dar.
-
-Die Wirtschaft selbst wird nicht innerhalb der Map berechnet.
-
-## 12.4 Strategische Bedeutung
-
-Transportverbindungen können die wirtschaftliche Bedeutung eines Sternensystems erhöhen.
-
-Ein System mit mehreren wichtigen Verbindungen kann als Verkehrsknoten dienen.
-
-Die Unterbrechung einer solchen Verbindung kann Auswirkungen auf Handel und Bevölkerungsmigration haben.
-
-Diese Zusammenhänge sollen auf der Sternenkarte sichtbar werden können.
+Bei Bedarf kann eine neue Route berechnet werden.
 
 ---
 
-# 13. Politische und strategische Darstellung
+# 10. Transportnetzwerke
 
-## 13.1 Fraktionszugehörigkeit
+## 10.1 Grundprinzip
 
-Sternensysteme können einer Fraktion zugeordnet sein oder keiner Fraktion gehören.
+Die Galaxiekarte soll aktive interstellare Transportnetzwerke darstellen können.
 
-Die politische Kontrolle wird aus dem Spielzustand übernommen.
+Hierbei muss zwischen möglichen Flugrouten und tatsächlich betriebenen Transportlinien unterschieden werden.
 
-Sie verändert nicht die astronomischen Positionen der Sterne.
+## 10.2 Mögliche Flugroute
 
-## 13.2 Fraktionsgebiete
+Eine mögliche Flugroute beschreibt eine Verbindung, die von einem geeigneten Raumschiff unter den geltenden Navigationsregeln zurückgelegt werden könnte.
 
-Die Galaxiekarte soll politische Einflussbereiche darstellen können.
+Das Vorhandensein einer solchen Route bedeutet nicht, dass dort regelmäßig Transportschiffe verkehren.
 
-Die Darstellung muss berücksichtigen, dass Sternensysteme im dreidimensionalen Raum verteilt sind.
+## 10.3 Aktive Transportlinie
 
-Eine ausschließlich flache, zweidimensionale Grenzdarstellung wäre daher nicht ausreichend.
+Eine aktive Transportlinie wird tatsächlich durch geeignete Transportschiffe bedient.
 
-Die konkrete Visualisierung von Einflussbereichen bleibt zunächst offen.
+Sie besitzt entsprechende Haltepunkte und verfügbare Transportkapazitäten.
 
-## 13.3 Kolonien
+## 10.4 Passagiertransport
 
-Besiedelte Systeme sollen als solche erkennbar sein.
+Das Bevölkerungssystem verwendet bestehende Transportschiffverbindungen für die automatische Migration.
 
-Bei Bedarf können folgende Informationen eingeblendet werden:
+Die Galaxiekarte kann diese Verbindungen darstellen.
+
+Mehrgliedrige Routen und Umsteigepunkte müssen dabei erkennbar sein können.
+
+Die eigentliche Bevölkerungszuweisung und Migrationsplanung werden nicht innerhalb der Galaxiekarte durchgeführt.
+
+## 10.5 Warentransport
+
+Materielle Ressourcen und Produkte können ebenfalls zwischen Kolonien transportiert werden.
+
+Die Galaxiekarte stellt hierfür geeignete interstellare Verbindungen dar.
+
+Die Produktion und Lagerhaltung verbleiben in den Wirtschaftssystemen.
+
+## 10.6 Verkehrsknoten
+
+Sternensysteme mit vielen Transportverbindungen können eine besondere strategische Bedeutung besitzen.
+
+Die Karte soll solche Verkehrsknoten sichtbar machen können.
+
+## 10.7 Transportfilter
+
+Ein eigener Kartenfilter soll vorhandene Transportlinien anzeigen können.
+
+Dabei sollen mindestens folgende Informationen unterscheidbar sein:
+
+- Passagierverbindungen.
+- Warenverbindungen.
+- Wichtige Umsteigepunkte.
+- Zentrale Transportknoten.
+
+Die Darstellung kann später um Kapazitäten und Auslastungsinformationen ergänzt werden.
+
+---
+
+# 11. Politische und strategische Kartenansichten
+
+## 11.1 Fraktionszugehörigkeit
+
+Jedes Sternensystem kann einer Fraktion zugeordnet sein oder keiner Fraktion gehören.
+
+Die Galaxiekarte kann diese Zugehörigkeit anzeigen.
+
+Die zugrunde liegenden Sternpositionen bleiben unverändert.
+
+## 11.2 Politische Einflussbereiche
+
+Die Karte soll die räumliche Ausdehnung verschiedener Fraktionen darstellen können.
+
+Da die Sternensysteme dreidimensional verteilt sind, müssen politische Gebiete ebenfalls räumlich nachvollziehbar dargestellt werden.
+
+Eine ausschließlich zweidimensionale Grenzlinie reicht hierfür nicht grundsätzlich aus.
+
+## 11.3 Politische Darstellung
+
+Die politische Kartenansicht soll sich an der Filter- und Informationsdarstellung von Elite Dangerous orientieren.
+
+Mögliche Darstellungsformen sind:
+
+- Farblich markierte Sternensysteme.
+- Transparente räumliche Einflussbereiche.
+- Hervorgehobene Grenzen.
+- Markierungen wichtiger Systeme.
+- Zusätzliche Fraktionsinformationen.
+
+Die konkrete Form der dreidimensionalen Gebietsvisualisierung bleibt offen.
+
+## 11.4 Kolonien
+
+Besiedelte Sternensysteme sollen auf der Galaxiekarte erkennbar sein.
+
+Die Karte kann unter anderem anzeigen:
 
 - Anzahl der Kolonien.
 - Kontrollierende Fraktion.
-- Bevölkerungsgröße.
-- Kolonietyp.
 - Wirtschaftliche Bedeutung.
+- Bevölkerungsgröße.
+- Strategische Bedeutung.
 
-Die Informationen stammen aus der Koloniesimulation.
+Die eigentlichen Koloniedaten werden vom zuständigen Spielsystem bereitgestellt.
 
-## 13.4 Raumflotten
+## 11.5 Hauptstadt und Kernsysteme
 
-Eigene und bekannte fremde Flotten sollen in der Karte angezeigt werden können.
+Die Hauptsysteme einer Fraktion sollen besonders markiert werden können.
 
-Die Darstellung umfasst:
+Dazu gehören:
 
-- Aktuellen Standort.
-- Zugehörige Fraktion.
-- Bewegungsstatus.
-- Geplante Route, soweit bekannt.
-- Zielsystem.
+- Hauptstadt.
+- Wichtige Kolonien.
+- Industrielle Zentren.
+- Forschungszentren.
+- Militärische Hauptstützpunkte.
 
-Die Sichtbarkeit fremder Flotten hängt später vom Erkundungs- und Sensorsystem ab.
+## 11.6 Strategische Infrastruktur
 
-## 13.5 Strategische Einrichtungen
+Die Galaxiekarte kann interstellare Einrichtungen anzeigen.
 
-Zu den anzuzeigenden Einrichtungen gehören:
+Beispiele:
 
-- Raumstationen.
-- Raumwerften.
 - Sprungtore.
+- Große Raumwerften.
+- Bedeutende Raumstationen.
 - Militärische Stützpunkte.
-- Transportknoten.
-- Weitere wichtige Weltrauminfrastruktur.
+- Verkehrsknoten.
+
+Dabei werden die Einrichtungen auf der galaktischen Ebene ihrem jeweiligen Sternensystem zugeordnet.
+
+Die detaillierte lokale Positionierung innerhalb des Sternensystems gehört nicht zur Galaxiekarte.
 
 ---
 
-# 14. Kartenfilter und Informationsansichten
+# 12. Flotten und militärische Informationen
 
-## 14.1 Grundprinzip
+## 12.1 Flotten auf der Galaxiekarte
 
-Die Sternenkarte soll unterschiedliche Informationsschichten anbieten.
+Raumflotten sollen als eigenständige strategische Markierungen auf der Galaxiekarte erscheinen.
 
-Der Spieler kann dadurch gezielt die Informationen anzeigen, die für eine bestimmte strategische Entscheidung relevant sind.
+Eine Flotte besitzt einen aktuellen interstellaren Standort beziehungsweise einen laufenden Reiseabschnitt.
 
-## 14.2 Vorgesehene Informationsschichten
+## 12.2 Flotteninformationen
 
-| Ansicht | Schwerpunkt |
-|---|---|
-| Astronomisch | Sterne und astronomische Eigenschaften |
-| Erkundung | Bekannte und unbekannte Systeme |
-| Politisch | Fraktionen und Einflussbereiche |
-| Kolonien | Besiedelte Systeme |
-| Wirtschaft | Wirtschaftsstandorte |
-| Ressourcen | Bekannte Rohstoffvorkommen |
-| Transport | Aktive Waren- und Passagierlinien |
-| Navigation | Warpstrecken und Sprungtore |
-| Militär | Flotten und militärische Einrichtungen |
+Die Kartenansicht kann folgende Informationen anzeigen:
 
-Diese Ansichten verändern ausschließlich die Darstellung.
+- Flottenname.
+- Eigentümerfraktion.
+- Anzahl der Schiffe.
+- Aktueller Standort.
+- Zielsystem.
+- Geplanter Reiseweg.
+- Voraussichtliche Ankunft.
+- Bewegungsstatus.
 
-Sie erzeugen keine abweichenden astronomischen Karten.
+## 12.3 Bewegte Flotten
 
-## 14.3 Kombination von Informationen
+Reisende Flotten sollen entlang ihrer geplanten interstellaren Route dargestellt werden können.
 
-Der Spieler soll mehrere relevante Informationen miteinander vergleichen können.
+Die angezeigte Position wird aus dem tatsächlichen Reisefortschritt abgeleitet.
 
-Beispielsweise können politische Gebiete zusammen mit Sprungtoren oder Kolonien zusammen mit Transportrouten dargestellt werden.
+Die grafische Bewegung darf nicht unabhängig von der Spielsimulation ablaufen.
 
-Die konkrete Zahl gleichzeitig aktivierbarer Informationsschichten bleibt offen.
+## 12.4 Fremde Flotten
 
-## 14.4 Übersichtlichkeit
+Die Sichtbarkeit fremder Flotten hängt von den verfügbaren Informationen der Spielerfraktion ab.
 
-Mit zunehmender Informationsdichte muss die Map unwichtige Details zurücknehmen können.
+Nicht entdeckte oder nicht erfassbare Flotten dürfen nicht allein aufgrund ihrer Existenz automatisch sichtbar sein.
 
-Ausgewählte Objekte und aktuelle Aufträge sollen weiterhin gut erkennbar bleiben.
+## 12.5 Militärische Kartenansicht
 
----
-
-# 15. Erkundung und Wissen
-
-## 15.1 Astronomische Daten und Zivilisationswissen
-
-Die Datenbasis des Spiels und das Wissen einer Fraktion sind zwei unterschiedliche Dinge.
-
-Die Spielwelt kann die tatsächlichen astronomischen Eigenschaften eines Sternensystems kennen, ohne dass die betreffende Zivilisation diese bereits erforscht oder untersucht hat.
-
-## 15.2 Sichtbarkeit
-
-Als konzeptionelle Grundlage können folgende Wissenszustände verwendet werden:
-
-| Zustand | Bedeutung |
-|---|---|
-| Unbekannt | Der Fraktion fehlen Informationen über das System |
-| Bekannt | Position und grundlegende Informationen sind vorhanden |
-| Erkundet | Ein Raumschiff hat das System untersucht |
-| Vermessen | Weitergehende astronomische Eigenschaften wurden ermittelt |
-
-Die genauen Übergänge zwischen den Zuständen gehören zum späteren Erkundungskonzept.
-
-## 15.3 Wissenschaftliche Realität
-
-Der Erkundungszustand darf die Herkunft wissenschaftlicher Daten nicht verändern.
-
-Ein in Gaia dokumentierter Stern bleibt ein realer astronomischer Datensatz, selbst wenn eine Spielfraktion seine Eigenschaften noch nicht kennt.
-
-Die Map muss diese beiden Informationsebenen getrennt behandeln können.
-
----
-
-# 16. Maßstäbe und Darstellung
-
-## 16.1 Astronomische Maßstäbe
-
-Die tatsächlichen Entfernungen zwischen Sternen sind wesentlich größer als die typischen Abstände innerhalb eines Sternensystems.
-
-Die Galaxie- und Sternensystemansichten sollen deshalb jeweils geeignete lokale Darstellungsmaßstäbe verwenden.
-
-## 16.2 Darstellung gegenüber Simulation
-
-Für die Spielsimulation maßgeblich sind:
-
-- Astronomische Positionen.
-- Tatsächliche Entfernungen.
-- Festgelegte Orbitalparameter.
-- Aktuelle Spielzeit.
-
-Die visuelle Darstellung darf dagegen Symbole vergrößern oder Informationen vereinfachen, damit die Karte bedienbar bleibt.
-
-## 16.3 Keine Verzerrung der Navigation
-
-Eine visuelle Anpassung darf niemals die reale Entfernung zwischen Sternensystemen verändern.
-
-Auch Warp-Reisezeiten müssen auf den tatsächlichen räumlichen Entfernungen beruhen.
-
-## 16.4 Lokale Sternensystemdarstellung
-
-Innerhalb eines Sternensystems können Sterne und Planeten stark unterschiedliche Größen besitzen.
-
-Die Darstellung soll deshalb die räumliche Orientierung ermöglichen, ohne vollständige maßstabsgetreue Planetenkugeln vorauszusetzen.
-
-Für auswählbare Planeten sind geeignete Kartensymbole ausreichend.
-
----
-
-# 17. Verhalten bei großen Datenmengen
-
-## 17.1 Langfristige Zielsetzung
-
-Die Sternenkarte soll langfristig sehr große Teile der Milchstraße darstellen können.
-
-Das Konzept setzt nicht voraus, dass sämtliche astronomischen Objekte ständig vollständig geladen oder als eigenständige grafische Objekte vorhanden sind.
-
-## 17.2 Unterschiedliche Detailgrade
-
-Je nach Entfernung und Betrachtungssituation kann die visuelle Darstellung unterschiedlich detailliert sein.
+Ein eigener Filter kann militärisch relevante Informationen hervorheben.
 
 Beispielsweise:
 
-- Große Entfernung: vereinfachte Sternsymbole.
-- Mittlere Entfernung: zusätzliche Sterninformationen.
-- Ausgewählte Systeme: ausführlichere Informationsanzeige.
-- Geöffnetes Sternensystem: vollständige lokale Systemdarstellung.
+- Eigene Flotten.
+- Bekannte feindliche Flotten.
+- Militärische Stützpunkte.
+- Verteidigte Systeme.
+- Strategisch wichtige Transportwege.
 
-Die astronomischen Daten bleiben dabei konsistent.
-
-## 17.3 Unabhängigkeit von der Kamera
-
-Die Spielsimulation läuft unabhängig davon weiter, welchen Bereich der Spieler betrachtet.
-
-Nicht sichtbare Sternensysteme müssen nicht dauerhaft grafisch animiert werden.
-
-Ihre astronomischen Positionen müssen jedoch zu jedem relevanten Spielzeitpunkt bestimmt werden können.
-
-## 17.4 Einheitliche Spielzeit
-
-Alle Sternensysteme verwenden dieselbe zentrale Spielzeit.
-
-Es darf nicht passieren, dass unterschiedliche Systeme aufgrund ihrer Sichtbarkeit mit voneinander abweichenden Zeitständen dargestellt werden.
+Die eigentliche Kampfsimulation ist nicht Bestandteil der Galaxiekarte.
 
 ---
 
-# 18. Spielstände und dauerhafte Weltkonsistenz
+# 13. Kartenfilter
 
-## 18.1 Astronomische Stammdaten
+## 13.1 Grundprinzip
 
-Die verwendete astronomische Datenbasis besitzt einen definierten Versionsstand.
+Die Galaxiekarte erhält unterschiedliche Informationsansichten.
 
-Ein Spielstand muss nachvollziehbar auf diese Datenbasis Bezug nehmen können.
+Die Bedienlogik soll sich an der Galaxiekarte von Elite Dangerous orientieren.
 
-## 18.2 Prozedurale Ergänzungen
+Der Spieler kann gezielt die Informationen hervorheben, die für seine aktuelle Aufgabe relevant sind.
 
-Generierte Objekte und Eigenschaften bleiben über das Speichern und Laden erhalten.
+## 13.2 Astronomischer Filter
 
-Ein Planet darf nach dem Laden nicht eine andere Umlaufbahn oder eine andere astronomische Zusammensetzung erhalten.
+Der astronomische Filter zeigt beispielsweise:
 
-## 18.3 Spielzustand
+- Sternklassen.
+- Sternfarben.
+- Sternhelligkeiten.
+- Wissenschaftlich bekannte Eigenschaften.
+- Entfernungen.
+- Interessante astronomische Systeme.
 
-Der Spielstand enthält die veränderlichen Informationen der Spielwelt.
+## 13.3 Politischer Filter
 
-Dazu gehören beispielsweise:
+Der politische Filter stellt Fraktionen und ihren galaktischen Einfluss dar.
 
-- Spielzeit.
-- Erkundungszustände.
-- Politische Kontrolle.
+Er kann insbesondere hervorheben:
+
+- Eigene Systeme.
+- Befreundete Systeme.
+- Verbündete Systeme.
+- Neutrale Systeme.
+- Feindliche Systeme.
+
+Die tatsächliche diplomatische Beziehung wird vom Diplomatiesystem bereitgestellt.
+
+## 13.4 Koloniefilter
+
+Der Koloniefilter hebt besiedelte Sternensysteme hervor.
+
+Optional können weitere Informationen angezeigt werden.
+
+Beispiele:
+
+- Bevölkerungsgröße.
+- Kolonieanzahl.
+- Wirtschaftliche Spezialisierung.
+- Versorgungsstatus.
+
+## 13.5 Wirtschaftsfilter
+
+Der Wirtschaftsfilter stellt wichtige Produktions- und Handelsstandorte dar.
+
+Die Karte kann beispielsweise bedeutende Industrie- oder Landwirtschaftssysteme hervorheben.
+
+## 13.6 Ressourcenfilter
+
+Der Ressourcenfilter stellt bekannte wirtschaftlich relevante Rohstoffinformationen auf Systemebene dar.
+
+Er zeigt keine planetaren Kacheln oder einzelnen Lagerstätten innerhalb eines Planeten.
+
+## 13.7 Transportfilter
+
+Der Transportfilter zeigt tatsächlich betriebene Waren- und Passagierverbindungen.
+
+Technisch mögliche, aber nicht betriebene Verbindungen werden davon getrennt behandelt.
+
+## 13.8 Navigationsfilter
+
+Der Navigationsfilter hebt interstellare Reiserouten, erreichbare Sternensysteme und zugängliche Sprungtore hervor.
+
+## 13.9 Militärfilter
+
+Der Militärfilter hebt bekannte Flotten und militärische Einrichtungen hervor.
+
+## 13.10 Erkundungsfilter
+
+Der Erkundungsfilter stellt das Wissen der aktuellen Fraktion über die Galaxie dar.
+
+Er unterscheidet beispielsweise bekannte, unerforschte und bereits untersuchte Sternensysteme.
+
+## 13.11 Kombinierte Filter
+
+Der Spieler soll mehrere Informationsarten bei Bedarf miteinander kombinieren können.
+
+Beispielsweise:
+
+- Politische Karte und Sprungtore.
+- Kolonien und Transportlinien.
+- Militärische Flotten und geplante Routen.
+- Erkundungsstatus und astronomische Sternklassen.
+
+Die Darstellung darf dabei nicht unübersichtlich werden.
+
+---
+
+# 14. Erkundung und Informationsverfügbarkeit
+
+## 14.1 Trennung von Sternendaten und Fraktionswissen
+
+Die astronomische Datenbasis und das tatsächliche Wissen einer Zivilisation sind unterschiedliche Informationen.
+
+Ein real katalogisierter Stern kann innerhalb der Spielwelt einer Fraktion unbekannt sein.
+
+Die Herkunft des astronomischen Datensatzes bleibt davon unberührt.
+
+## 14.2 Vorgesehene Erkundungszustände
+
+Als konzeptionelle Grundlage können folgende Zustände verwendet werden:
+
+| Zustand | Bedeutung |
+|---|---|
+| Unbekannt | Der Fraktion liegen keine verwertbaren Informationen vor |
+| Bekannt | Position und grundlegende Informationen sind bekannt |
+| Erkundet | Das System wurde untersucht |
+| Vermessen | Weitergehende astronomische Informationen liegen vor |
+
+Die genauen Bedingungen für diese Zustände werden im separaten Erkundungskonzept festgelegt.
+
+## 14.3 Anzeige unbekannter Systeme
+
+Wie unbekannte Sternensysteme auf der Karte erscheinen, bleibt eine offene konzeptionelle Entscheidung.
+
+Möglichkeiten sind:
+
+- Vollständige Ausblendung.
+- Stark vereinfachte Markierung.
+- Anzeige der bekannten Sternposition ohne weitere Eigenschaften.
+- Darstellung einer unbekannten beziehungsweise nicht untersuchten Region.
+
+Die endgültige Regel muss zur gewünschten Verbindung aus astronomischer Glaubwürdigkeit und 4X-Erkundung passen.
+
+## 14.4 Sensordaten
+
+Spätere Sensor- und Aufklärungssysteme können zusätzliche Informationen über Sternensysteme, Flotten und Infrastruktur bereitstellen.
+
+Die Galaxiekarte übernimmt die verfügbaren Informationen und stellt sie dar.
+
+Sie führt selbst keine eigenständige Sensorsimulation aus.
+
+---
+
+# 15. Maßstäbe und räumliche Genauigkeit
+
+## 15.1 Astronomische Koordinaten
+
+Sternensysteme besitzen ihre Positionen in einem gemeinsamen dreidimensionalen Koordinatenraum.
+
+Die Koordinaten bleiben unabhängig von der aktuellen Kameraansicht.
+
+## 15.2 Entfernungen
+
+Interstellare Entfernungen werden mit geeigneten astronomischen Einheiten beschrieben.
+
+Für den Spieler sollen Entfernungen üblicherweise in Lichtjahren angezeigt werden.
+
+## 15.3 Maßstab der Karte
+
+Die Darstellung verwendet einen für große interstellare Entfernungen geeigneten Maßstab.
+
+Die Größe von Sternsymbolen und Beschriftungen darf unabhängig von der physikalischen Größe eines Sterns angepasst werden.
+
+Die Sternpositionen selbst dürfen dadurch nicht verändert werden.
+
+## 15.4 Referenzebene
+
+Die Referenzebene dient ausschließlich der räumlichen Orientierung.
+
+Sie ist keine Einschränkung des galaktischen Raums.
+
+## 15.5 Dreidimensionale Tiefe
+
+Die tatsächliche räumliche Position eines Sternensystems soll durch Drehung und Neigung der Karte erkennbar sein.
+
+Die Karte darf die dritte Dimension nicht nur durch künstliche optische Effekte vortäuschen.
+
+## 15.6 Visuelle Verzerrungen
+
+Dekorative Effekte oder skalierte Markierungen dürfen die Entfernung zwischen zwei Sternensystemen nicht verändern.
+
+Das Navigationssystem verwendet weiterhin die tatsächlichen räumlichen Koordinaten.
+
+---
+
+# 16. Zeit und Spielsimulation
+
+## 16.1 Globale Spielzeit
+
+Die Galaxiekarte verwendet die zentrale Spielzeit von Project Sagittarius.
+
+Sie besitzt keine eigene, unabhängig fortschreitende Spielzeit.
+
+## 16.2 Raumflotten
+
+Flottenbewegungen werden anhand der aktuellen Spielzeit beziehungsweise des tatsächlich fortgeschrittenen Reisevorgangs dargestellt.
+
+Wird das Spiel pausiert, dürfen sich Flotten nicht unabhängig davon weiterbewegen.
+
+## 16.3 Zeitbeschleunigung
+
+Wird die Spielgeschwindigkeit erhöht, soll die Anzeige von Flottenbewegungen und Reisezeiten entsprechend reagieren.
+
+## 16.4 Astronomische Sternpositionen
+
+Die wissenschaftlichen Sternkoordinaten beziehen sich auf eine definierte astronomische Bezugsepoche.
+
+Ob und in welchem Umfang die Eigenbewegung von Sternen über lange Spielzeiträume berücksichtigt wird, ist noch nicht abschließend festgelegt.
+
+Die Galaxiekarte darf jedoch keine frei erfundenen Sternbewegungen erzeugen.
+
+## 16.5 Keine planetare Orbitalbewegung
+
+Die Galaxiekarte ist ausdrücklich nicht für die Bewegung von Planeten oder Monden zuständig.
+
+Sie berechnet und visualisiert keine planetaren Umlaufbahnen.
+
+Das entsprechende Verhalten gehört ausschließlich zur späteren eigenständigen Sternensystemansicht.
+
+---
+
+# 17. Große astronomische Datenbestände
+
+## 17.1 Langfristige Zielsetzung
+
+Die Galaxiekarte soll sehr große astronomische Sternpopulationen darstellen können.
+
+Die langfristige Spielwelt orientiert sich an der Milchstraße.
+
+## 17.2 Visuelle Skalierbarkeit
+
+Nicht jeder vorhandene Stern muss bei jeder Zoomstufe mit sämtlichen Details angezeigt werden.
+
+Die Kartendarstellung kann ihre Detailtiefe abhängig von Entfernung und Betrachtungssituation anpassen.
+
+## 17.3 Unterschiedliche Detailstufen
+
+Beispielsweise:
+
+**Weite Übersicht**
+
+Darstellung großer Sternregionen mit reduzierten Details.
+
+**Regionale Ansicht**
+
+Darstellung einzelner Sternpopulationen und wichtiger Systeme.
+
+**Nahe Sternenansicht**
+
+Detaillierte Markierungen, Sternnamen und Auswahlmöglichkeiten.
+
+Alle Ansichten verwenden dieselben astronomischen Positionen.
+
+## 17.4 Beschriftungsdichte
+
+Die Anzahl sichtbarer Namen und Informationen wird an die aktuelle Zoomstufe angepasst.
+
+Wichtige und ausgewählte Objekte werden bevorzugt dargestellt.
+
+## 17.5 Unabhängigkeit von der Grafikdarstellung
+
+Die Spielsimulation darf nicht davon abhängen, dass jeder Stern ständig als vollständiges grafisches Objekt geladen ist.
+
+Die Darstellung muss auch bei großen Datenbeständen unabhängig vom eigentlichen Spielzustand arbeiten können.
+
+## 17.6 Übersichtlichkeit
+
+Die Karte soll nicht ausschließlich möglichst viele Sterne gleichzeitig anzeigen.
+
+Ebenso wichtig ist, dass der Spieler räumliche Zusammenhänge erkennen und einzelne Systeme zuverlässig auswählen kann.
+
+---
+
+# 18. Spielstände und Kartenstatus
+
+## 18.1 Astronomische Datenbasis
+
+Die Galaxiekarte verwendet einen definierten Stand der astronomischen Datenbasis.
+
+Ein Spielstand muss nachvollziehbar auf den verwendeten Datenstand Bezug nehmen können.
+
+## 18.2 Kartenposition
+
+Der aktuelle Kamerastandort soll wiederherstellbar sein.
+
+Dazu gehören gegebenenfalls:
+
+- Kameraposition.
+- Kamerarichtung.
+- Zoomstufe.
+- Aktueller Fokuspunkt.
+- Ausgewähltes Sternensystem.
+
+## 18.3 Kartenfilter
+
+Die aktuell ausgewählten Informationsfilter können als Teil des Benutzerzustands gespeichert werden.
+
+## 18.4 Markierungen
+
+Vom Spieler gesetzte Favoriten und strategische Kartenmarkierungen sollen dauerhaft erhalten bleiben können.
+
+## 18.5 Spielzustand
+
+Die Galaxiekarte übernimmt aktuelle Informationen über:
+
+- Fraktionen.
 - Kolonien.
 - Flotten.
 - Sprungtore.
-- Transportverbindungen.
-- Laufende Reiseaufträge.
+- Transportlinien.
+- Erkundung.
+- Navigationsaufträge.
 
-## 18.4 Aktuelle Kartenansicht
+Die Zuständigkeit für diese Daten verbleibt bei den entsprechenden Spielsystemen.
 
-Die aktuell ausgewählte Ansicht und der Kamerafokus sollen nach dem Laden wiederherstellbar sein.
+## 18.6 Konsistenz
 
-Die Auswahl eines Planeten darf dabei keine Änderung seiner astronomischen Bahn verursachen.
-
-## 18.5 Wissenschaftliche Datenupdates
-
-Neue Versionen astronomischer Kataloge dürfen bestehende Spielstände nicht unkontrolliert verändern.
-
-Ein laufendes Spiel soll seine zugrunde liegende astronomische Welt konsistent behalten.
-
-Die konkrete Behandlung späterer Katalogupdates wird gesondert festgelegt.
+Nach dem Laden eines Spielstands müssen Sternpositionen, sichtbare Systemmarkierungen und strategische Informationen mit dem gespeicherten Spielzustand übereinstimmen.
 
 ---
 
-# 19. Beispiel eines Spielablaufs
+# 19. Beispiel einer Kartenbedienung
 
-Der Spieler befindet sich in der dreidimensionalen Galaxiekarte.
+Der Spieler öffnet die Galaxiekarte.
 
-Er sucht nach einem bestimmten Sternensystem.
+Die Milchstraße wird als dreidimensionaler Sternenraum dargestellt.
 
-Nach der Auswahl wird das System hervorgehoben.
+Ein dunkler Hintergrund, räumliche Sternmarkierungen, ein optionales Orientierungsgitter und eine technisch wirkende Benutzeroberfläche bilden die Kartenansicht.
 
-Das Informationsfenster zeigt die verfügbaren astronomischen Eigenschaften und gegebenenfalls die politische Zugehörigkeit.
+Der Spieler bewegt die Kamera durch den Raum.
 
-Der Spieler öffnet die Sternensystemansicht.
+Er dreht und neigt die Karte, um die räumliche Verteilung der Sterne zu betrachten.
 
-Die Kamera wechselt in das ausgewählte System.
+Anschließend verwendet er die Suchfunktion, um ein bestimmtes Sternensystem zu finden.
 
-Dort wird der Zentralstern beziehungsweise bei einem Mehrfachsternsystem die passende Sternenkonfiguration sichtbar.
+Das System wird auf der Karte hervorgehoben.
 
-Die Planeten bewegen sich auf ihren festgelegten Umlaufbahnen.
+Die Kamera richtet sich auf den ausgewählten Stern aus.
 
-Der Spieler wählt einen Planeten aus.
+Im Informationsbereich erscheinen die verfügbaren astronomischen Eigenschaften und strategischen Daten.
 
-Die Kamera richtet sich auf dessen aktuelle Position aus und folgt der Umlaufbewegung.
+Der Spieler aktiviert anschließend den politischen Kartenfilter.
 
-Das Informationsfenster zeigt beispielsweise die Planetenklasse, vorhandene Monde, die Umlaufperiode und die Bewohnbarkeit für die gewählte Spezies.
+Die kontrollierten Sternensysteme verschiedener Fraktionen werden entsprechend hervorgehoben.
 
-Ist eine Kolonie vorhanden, kann der Spieler die zweidimensionale Planetenverwaltung öffnen.
+Danach schaltet er auf den Navigationsfilter um.
 
-Dort verwaltet er Gebäude, Bevölkerung und Produktion über das Kachelraster.
+Er wählt ein Zielsystem aus und lässt eine Route berechnen.
 
-Anschließend schließt er die Verwaltung und kehrt zur Sternensystemansicht zurück.
+Die Karte zeigt den Verlauf der Route durch den dreidimensionalen Sternenraum.
 
-Über die Galaxiekarte kann er eine interstellare Reise zu einem anderen Sternensystem planen.
+Vorhandene und zugängliche Sprungtore werden berücksichtigt.
 
-Die Karte zeigt eine gültige Route unter Berücksichtigung des vorhandenen Warpantriebs und zugänglicher Sprungtore.
+Die voraussichtliche Reisezeit wird angezeigt.
 
-Dieser Ablauf verbindet die verschiedenen Ansichten, ohne dass sie unterschiedliche astronomische Grundlagen verwenden.
+Der Spieler kann die Kamera währenddessen weiterhin drehen, neigen und zoomen, um den Verlauf der Route aus verschiedenen Perspektiven zu betrachten.
+
+Anschließend aktiviert er den Transportfilter.
+
+Die Karte zeigt die tatsächlich betriebenen interstellaren Transportverbindungen.
+
+Dabei werden mögliche Flugrouten und aktive Transportschiffverbindungen klar unterschieden.
+
+**Dieser Ablauf beschreibt ausschließlich die Galaxiekarte.**
+
+Die Darstellung eines einzelnen Sternensystems, seiner Planeten und Umlaufbahnen ist nicht Bestandteil dieses Ablaufs.
 
 ---
 
 # 20. Verbindliche Festlegungen
 
-Für die Sternenkarte gelten die folgenden bereits vereinbarten Anforderungen:
+Für die Galaxiekarte gelten folgende verbindliche Anforderungen.
 
-1. Die Milchstraße wird dreidimensional dargestellt.
-2. Reale astronomische Sternpositionen bilden die Grundlage.
-3. Tatsächliche dreidimensionale Sternentfernungen werden berücksichtigt.
-4. Fehlende astronomische Informationen können deterministisch generiert werden.
-5. Wissenschaftliche und generierte Eigenschaften bleiben unterscheidbar.
-6. Ein Sternensystem kann aus der Galaxiekarte ausgewählt werden.
-7. Die Auswahl eines Systems ermöglicht den Wechsel in eine lokale 3D-Sternensystemansicht.
-8. Bei Einzelsternsystemen bildet der Zentralstern den räumlichen Mittelpunkt.
-9. Doppel- und Mehrfachsternsysteme verwenden passende hierarchische Bahnstrukturen.
-10. Planeten und Monde besitzen festgelegte Umlaufbahnen.
-11. Eine Gravitationssimulation findet nicht statt.
-12. Die Bewegung der Himmelskörper hängt von der Spielzeit ab.
-13. Die Kamera kann ausgewählte Planeten verfolgen.
-14. Die Planetenverwaltung erfolgt in einem separaten 2D-Fenster.
-15. Es gibt keine dreidimensional bebaubare Planetenoberfläche.
-16. Die interstellare Navigation verwendet echte räumliche Sternentfernungen.
-17. Raumschiffe verwenden Warpantriebe mit neun Stufen.
-18. Sprungtore werden von Fraktionen errichtet.
-19. Eine zugängliche Sprungtorpassage benötigt keine Spielzeit.
-20. Eigene, befreundete und verbündete Fraktionen dürfen die entsprechenden Sprungtore benutzen.
-21. Warpreisen und Sprungtorpassagen dürfen in einer Route kombiniert werden.
-22. Eine mögliche Flugroute ist nicht automatisch eine aktive Transportschiffverbindung.
-23. Astronomische Daten, Spielzustand und grafische Darstellung bleiben voneinander getrennt.
-24. Die Sternenkarte soll langfristig große astronomische Datenbestände unterstützen.
+## 20.1 Grundaufbau
+
+1. Die Map ist ausschließlich eine Galaxiekarte.
+2. Sie stellt die Milchstraße dreidimensional dar.
+3. Reale astronomische Sternpositionen bilden die Grundlage.
+4. Tatsächliche dreidimensionale Sternentfernungen werden berücksichtigt.
+5. Die dritte Dimension muss für den Spieler räumlich erkennbar sein.
+6. Sternensysteme sind eigenständige galaktische Kartenobjekte.
+
+## 20.2 Elite-Dangerous-Orientierung
+
+7. Die Galaxiekarte von Elite Dangerous ist die verbindliche visuelle Referenz.
+8. Die grundlegende räumliche Darstellung soll sich eng an Elite Dangerous orientieren.
+9. Die Kameraführung soll ein vergleichbares Bediengefühl bieten.
+10. Zoomen, Drehen, Neigen, Verschieben und Fokussieren sollen sich an dieser Bedienphilosophie orientieren.
+11. Orientierungsgitter und räumliche Hilfslinien sind Bestandteil des vorgesehenen Kartenstils.
+12. Sternenauswahl, Suchfunktionen, Informationsfenster und Kartenfilter sollen sich an der entsprechenden Bedienlogik orientieren.
+13. Die Darstellung soll dunkel, technisch-futuristisch und räumlich übersichtlich sein.
+14. Project Sagittarius erhält eine eigenständige grafische Identität und verwendet keine übernommenen Elite-Dangerous-Assets.
+
+## 20.3 Funktionale Zuständigkeit
+
+15. Die Map zeigt ausschließlich die galaktische Ebene.
+16. Die Sternensystemansichten sind eigenständige Spielsysteme.
+17. Die Map stellt keine planetaren Umlaufbahnen dar.
+18. Die Map simuliert keine Planeten- oder Mondbewegungen.
+19. Die Map enthält keine planetare Kachelverwaltung.
+20. Die Map enthält keine detaillierte lokale Sternensystemkamera.
+21. Eine spätere Anbindung anderer Ansichten bleibt möglich, wird hier jedoch nicht spezifiziert.
+
+## 20.4 Daten
+
+22. Wissenschaftliche Sterninformationen werden von der astronomischen Datenbasis bereitgestellt.
+23. Die Herkunft astronomischer Daten bleibt nachvollziehbar.
+24. Wissenschaftliche und generierte Informationen dürfen nicht verwechselt werden.
+25. Sternpositionen bleiben unabhängig von der visuellen Symbolgröße erhalten.
+26. Astronomische Daten, Spielzustand und grafische Darstellung bleiben voneinander getrennt.
+
+## 20.5 StellarForge
+
+27. StellarForge gehört nicht zum Umfang der Galaxiekarte.
+28. Die Funktionsweise von StellarForge wird später in einem eigenen Konzeptdokument beschrieben.
+29. Die Galaxiekarte muss ihre grundlegenden Aufgaben unabhängig von StellarForge erfüllen können.
+
+## 20.6 Navigation
+
+30. Die Galaxiekarte stellt interstellare Navigationsinformationen dar.
+31. Die Navigation verwendet tatsächliche dreidimensionale Sternentfernungen.
+32. Warpantriebe besitzen neun Geschwindigkeitsstufen.
+33. Eine gemeinsam reisende Flotte richtet sich nach ihrem langsamsten Schiff.
+34. Sprungtore werden von Fraktionen errichtet.
+35. Zugängliche Sprungtorpassagen benötigen keine Spielzeit.
+36. Eigene, befreundete und verbündete Sprungtore dürfen entsprechend den geltenden Rechten verwendet werden.
+37. Warpstrecken und Sprungtorpassagen dürfen innerhalb derselben Route kombiniert werden.
+38. Eine technisch mögliche Flugroute ist nicht automatisch eine aktiv betriebene Transportverbindung.
+
+## 20.7 Strategische Darstellung
+
+39. Fraktionsgebiete können auf der Galaxiekarte dargestellt werden.
+40. Kolonien und wichtige Sternensysteme können markiert werden.
+41. Flotten können als bewegliche galaktische Kartenobjekte dargestellt werden.
+42. Aktive Transportverbindungen können angezeigt werden.
+43. Kartenfilter verändern die Informationsdarstellung, nicht die astronomischen Positionen.
+44. Die Galaxiekarte soll langfristig große astronomische Datenbestände unterstützen.
 
 ---
 
-# 21. Noch offene konzeptionelle Entscheidungen
+# 21. Offene konzeptionelle Entscheidungen
 
-Die folgenden Fragen bleiben bewusst offen und sind keine bereits beschlossenen Spielregeln.
+Die folgenden Punkte sind noch nicht abschließend festgelegt.
 
-## 21.1 Sichtbarkeit der Milchstraße
+## 21.1 Vollständiger Umfang der Milchstraße
 
-Soll die gesamte astronomische Sternenkarte von Spielbeginn an sichtbar sein, oder werden Sternregionen erst durch Erkundung freigegeben?
+Wie groß soll der tatsächlich bespielbare Raum sein?
 
-Eine Unterscheidung zwischen bekannten Sternpositionen und unbekannten planetaren Eigenschaften ist ebenfalls möglich.
+Die langfristige Zielsetzung ist eine möglichst umfangreiche Milchstraßendarstellung.
 
-## 21.2 Umfang der Galaxie
+Die konkreten Grenzen bleiben offen.
 
-Wie groß soll der tatsächlich bespielbare Bereich der Milchstraße sein?
+## 21.2 Sichtbarkeit unbekannter Sterne
 
-Die langfristige Ausrichtung ist eine möglichst umfangreiche Milchstraßendarstellung.
+Sollen alle katalogisierten Sternpositionen von Beginn an sichtbar sein?
 
-Die konkreten Grenzen werden später entschieden.
+Oder sollen bestimmte Sterne und Regionen erst durch Erkundung freigeschaltet werden?
 
-## 21.3 Sternbewegung
+Eine Trennung zwischen bekannter Sternposition und unbekannten Systemeigenschaften ist möglich.
 
-Sollen sich Sterne selbst aufgrund ihrer astronomischen Eigenbewegung während langer Spielzeiträume sichtbar verändern?
+## 21.3 Stellare Eigenbewegung
 
-Die festgelegten planetaren Umlaufbahnen bleiben von dieser Entscheidung unberührt.
+Sollen Sterne über lange Spielzeiträume ihre wissenschaftlich bekannte Eigenbewegung berücksichtigen?
 
-## 21.4 Darstellung der Planeten
+Die konkrete Regel bleibt offen.
 
-Wie detailliert sollen die Symbole für Planeten, Monde und andere Himmelskörper innerhalb der Sternensystemansicht gestaltet werden?
+## 21.4 Sternsymbole
 
-Die Entscheidung muss mit dem Verzicht auf eine dreidimensionale Planetenverwaltung vereinbar bleiben.
+Wie exakt sollen die Sternmarkierungen, Leuchteffekte und Auswahlrahmen gestaltet sein?
 
-## 21.5 Erkundungsmechanik
+Die Elite-Dangerous-Orientierung ist verbindlich.
 
-Welche Informationen besitzt eine Zivilisation zu Spielbeginn?
+Die konkrete eigene Symbolgestaltung bleibt offen.
 
-Welche Eigenschaften müssen durch wissenschaftliche Erkundung freigeschaltet werden?
+## 21.5 Farbpalette
 
-## 21.6 Stern-zu-Stern-Verbindungen
+Welche genauen Farben werden für Auswahl, Navigation, Fraktionen und Kartenfilter verwendet?
 
-Welche Sternsysteme darf ein Raumschiff unmittelbar per Warp anfliegen?
+Die grundsätzliche visuelle Richtung ist festgelegt.
 
-Soll es eine maximale einzelne Warpetappe geben oder ausschließlich zeitabhängige Entfernungsberechnungen?
+## 21.6 Kamerabedienung
 
-## 21.7 Reisen innerhalb eines Sternensystems
+Welche Mausaktionen und Tastenkombinationen werden für Drehen, Verschieben, Zoomen und Fokussieren verwendet?
 
-Welche Zeit benötigen Raumschiffe für die Bewegung zwischen Planeten, Raumstationen und Sprungtoren innerhalb desselben Systems?
+Das Bediengefühl soll Elite Dangerous entsprechen.
 
-Diese Regel wurde noch nicht abschließend definiert.
+Die genaue Eingabebelegung wird später definiert.
 
-## 21.8 Politische Raumgrenzen
+## 21.7 Informationsfenster
 
-Wie sollen dreidimensionale Einfluss- und Hoheitsgebiete dargestellt werden?
+Wie werden die einzelnen Informationsbereiche räumlich angeordnet?
 
-Die Darstellung muss die tatsächliche räumliche Sternverteilung berücksichtigen.
+Welche Informationen sollen jederzeit und welche nur nach Auswahl sichtbar sein?
 
-## 21.9 Kartengestaltung
+## 21.8 Politische Gebiete
 
-Welche konkreten Farben, Symbole, Informationsebenen und visuellen Effekte soll die Sternenkarte besitzen?
+Wie werden dreidimensionale Fraktionsgrenzen grafisch dargestellt?
 
-Die Gestaltung soll sich an der gewünschten astronomischen Atmosphäre orientieren, aber eine eigenständige visuelle Identität besitzen.
+Die Darstellung muss die räumliche Verteilung der Sternensysteme berücksichtigen.
+
+## 21.9 Warp-Verbindungen
+
+Welche Sternensysteme dürfen unmittelbar per Warp erreicht werden?
+
+Soll eine maximale Einzelstrecke existieren?
+
+Diese Regeln werden im eigenständigen Raumfahrtkonzept festgelegt.
+
+## 21.10 Kartendichte
+
+Wie sollen extrem dichte Sterngebiete dargestellt werden, ohne die Auswahl einzelner Sterne zu erschweren?
+
+## 21.11 Darstellung beweglicher Flotten
+
+Wie detailliert werden Flotten während interstellarer Reisen visualisiert?
+
+Die Position muss dem tatsächlichen Reisefortschritt entsprechen.
+
+Die genaue grafische Gestaltung bleibt offen.
 
 ---
 
 # 22. Zusammenfassung
 
-Die Sternenkarte von Project Sagittarius bildet eine hybride, dreidimensionale Milchstraße.
+Die Galaxiekarte von Project Sagittarius ist ein eigenständiges strategisches Spielsystem.
 
-Ihre Grundlage sind reale astronomische Daten, die durch plausible und reproduzierbare Inhalte ergänzt werden können.
+Sie stellt die Milchstraße als realen dreidimensionalen Sternenraum dar.
 
-Die Spielwelt besitzt zwei räumliche Ansichten:
+Die Sternpositionen basieren möglichst auf wissenschaftlich dokumentierten astronomischen Daten.
 
-**Galaxiekarte**
+Die tatsächlichen räumlichen Entfernungen bilden die Grundlage für die interstellare Navigation.
 
-Sie zeigt Sternsysteme, tatsächliche dreidimensionale Sternpositionen, strategische Informationen und interstellare Routen.
+**Die Darstellung, Bedienung und das allgemeine Look & Feel orientieren sich ausdrücklich an der Galaxiekarte von Elite Dangerous.**
 
-**Sternensystemansicht**
+Besonders wichtig sind:
 
-Sie zeigt Sterne, Planeten, Monde und weitere Objekte innerhalb eines ausgewählten Systems.
+- Eine räumlich glaubwürdige 3D-Sternenkarte.
+- Ein dunkler, technisch-futuristischer Stil.
+- Ein Orientierungsgitter mit räumlichen Referenzlinien.
+- Freie und präzise Kamerasteuerung.
+- Flüssiges Zoomen, Drehen und Neigen.
+- Eindeutige Auswahl und Fokussierung von Sternensystemen.
+- Suchfunktionen.
+- Astronomische und strategische Informationsansichten.
+- Interstellare Routenplanung.
+- Die Darstellung von Sprungtoren, Flotten und Transportverbindungen.
 
-Die natürlichen Himmelskörper bewegen sich auf festgelegten Umlaufbahnen. Eine Gravitationssimulation findet nicht statt.
+Die Galaxiekarte zeigt ausschließlich die galaktische Ebene.
 
-Die Auswahl eines Planeten ermöglicht eine automatische Kameraverfolgung.
+**Die dreidimensionalen Sternensystemansichten sind unabhängig davon und erhalten ein eigenes Konzept.**
 
-Die eigentliche Kolonieverwaltung erfolgt über ein zweidimensionales Fenster und bleibt von der räumlichen Sternenkarte getrennt.
+Innerhalb der Galaxiekarte werden keine Planetenumlaufbahnen, Monde oder lokalen Sternensystembewegungen dargestellt beziehungsweise berechnet.
 
-Die Sternenkarte stellt damit die gemeinsame astronomische und räumliche Grundlage für die späteren Spielmechaniken dar, ohne selbst deren vollständige Simulation zu übernehmen.
+**StellarForge ist ebenfalls kein Bestandteil der Galaxiekarte und erhält später ein eigenständiges Konzeptdokument.**
 
-**Dieses Dokument beschreibt ausschließlich das fachliche Spielkonzept der Sternenkarte. Es enthält keinen Entwicklungsplan, keinen Implementierungsplan und keine technische Aufgabenliste.**
+Die Galaxiekarte soll als eigenständiges System bestehen können und später die benötigten Informationen aus anderen Spielsystemen übernehmen.
 
-**Dokumentversion: 0.2**
+Dieses Dokument beschreibt ausschließlich das fachliche Spielkonzept der Galaxiekarte. Es enthält keinen Entwicklungsplan, keinen Implementierungsplan und keine technische Aufgabenliste.
+
+**Dokumentversion: 0.3**
 
 ---
 
@@ -1242,12 +1647,19 @@ Die Sternenkarte stellt damit die gemeinsame astronomische und räumliche Grundl
 - [ESA Gaia Archive](https://gea.esac.esa.int/archive/)
 - [ESA Gaia](https://www.esa.int/Science_Exploration/Space_Science/Gaia)
 - [Hipparcos-Kataloge](https://www.cosmos.esa.int/web/hipparcos)
-- [NASA Exoplanet Archive](https://exoplanetarchive.ipac.caltech.edu/)
+
+## Visuelle und funktionale Referenz
+
+- [Elite Dangerous – Offizielle Website](https://www.elitedangerous.com/)
+
+Elite Dangerous dient als Referenz für die Darstellung, Bedienung und räumliche Navigation der Galaxiekarte.
+
+Project Sagittarius erhält eine eigenständige grafische Gestaltung und verwendet keine übernommenen Originalassets.
 
 ## Projektbezug
 
 - [Project Sagittarius – GitHub-Repository](https://github.com/Drezael/project_sagittarius)
-- [README](../../readme.md)
-- [Forschungskonzept](../../project.md)
+- [README](../../../readme.md)
+- [Forschungskonzept](../../../project.md)
 
-Die Datenquellen sind als konzeptionelle Grundlage vorgesehen. Datenqualität, konkrete Importverfahren und Nutzungsbedingungen werden gesondert behandelt.
+Die astronomischen Quellen sind als fachliche Datengrundlage vorgesehen. Datenqualität, konkrete Importverfahren und Nutzungsbedingungen werden gesondert behandelt.
